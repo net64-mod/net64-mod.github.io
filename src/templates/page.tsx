@@ -1,9 +1,17 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+// @ts-ignore
+import rehypeReact from 'rehype-react'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
+import Button from '../components/Button'
 import IndexLayout from '../layouts'
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+  components: { button: Button }
+}).Compiler
 
 interface PageTemplateProps {
   data: {
@@ -18,7 +26,7 @@ interface PageTemplateProps {
       }
     }
     markdownRemark: {
-      html: string
+      htmlAst: string
       excerpt: string
       frontmatter: {
         title: string
@@ -32,7 +40,7 @@ const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
     <Page>
       <Container>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <div>{renderAst(data.markdownRemark.htmlAst)}</div>
       </Container>
     </Page>
   </IndexLayout>
@@ -53,7 +61,7 @@ export const query = graphql`
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      htmlAst
       excerpt
       frontmatter {
         title

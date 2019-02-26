@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
+import Button from '../components/Button'
 
 const IndexPage = () => (
   <IndexLayout>
@@ -12,10 +12,10 @@ const IndexPage = () => (
         <h1>Hi people</h1>
         <p>Welcome to Net64.</p>
         <p>
-          <Link to="/net64plus/">Download the client</Link>
+          <Button label="Download the client" to="/net64plus/" />
         </p>
         <p>
-          <Link to="/hosting/">Server Hosting</Link>
+          <Button label="Server Hosting" to="/hosting/" />
         </p>
       </Container>
     </Page>

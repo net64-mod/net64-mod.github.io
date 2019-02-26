@@ -17,6 +17,9 @@ const IndexPage = () => (
         <p>
           <Button label="Server Hosting" to="/hosting/" />
         </p>
+        <p>
+          <Link to="/faq/">Read the FAQ</Link>
+        </p>
       </Container>
     </Page>
   </IndexLayout>

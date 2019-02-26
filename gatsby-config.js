@@ -2,13 +2,13 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    title: 'Net64 - Super Mario 64 Online',
+    description: 'Official website for Net64, a Super Mario 64 mod for playing online.',
+    siteUrl: 'https://net64-mod.github.io',
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
+      name: 'Mario Reder',
+      url: 'https://github.com/Tarnadas',
+      email: 'mreder1289@gmail.com'
     }
   },
   plugins: [

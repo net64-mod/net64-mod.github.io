@@ -1,9 +1,11 @@
 {
-  "name": "gatsby-starter-typescript-plus",
-  "description": "A starter kit for TypeScript-based Gatsby projects with sensible defaults.",
-  "version": "1.0.0",
-  "private": true,
-  "author": "Resi Respati <resir014@gmail.com>",
+  "name": "net64.github.io",
+  "description": "Official Net64 website.",
+  "version": "0.0.1",
+  "private": false,
+  "authors": [
+    "Mario Reder <mreder1289@gmail.com>"
+  ],
   "keywords": [
     "gatsby"
   ],
@@ -12,7 +14,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "dev": "gatsby develop",
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "tslint 'src/**/*.{ts,tsx}' -p tsconfig.json",

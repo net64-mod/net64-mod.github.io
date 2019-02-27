@@ -4,9 +4,11 @@ node_js:
 
 jobs:
   include:
-    - stage: Build
+    - stage: Test
+      script: yarn test
+      name: "Build"
       script: yarn build
-    - stage: Deploy
+      name: "Deploy"
       deploy:
         provider: pages
         skip-cleanup: true

@@ -7,9 +7,8 @@ jobs:
     - stage: Test
       script: yarn test
       name: "Test"
-    - name: "Build"
+    - name: "Build & Deploy"
       script: yarn build
-    - name: "Deploy"
       deploy:
         provider: pages
         skip-cleanup: true

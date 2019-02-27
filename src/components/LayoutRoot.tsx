@@ -7,8 +7,6 @@ const StyledLayoutRoot = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Press Start 2P', sans-serif;
-  font-family: 'Open Sans', sans-serif;
 `
 
 interface LayoutRootProps {

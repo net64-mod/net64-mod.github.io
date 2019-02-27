@@ -65,7 +65,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Press Start 2P', 'Open Sans']
+          families: ['Open Sans']
         }
       }
     }

@@ -32,6 +32,7 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          'gatsby-remark-component',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -42,12 +43,6 @@ module.exports = {
             }
           }
         ]
-      }
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: ['gatsby-remark-component']
       }
     },
     'gatsby-transformer-json',

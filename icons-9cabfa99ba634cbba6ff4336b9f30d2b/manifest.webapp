@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "net64.github.io",
+  "description": null,
+  "icons": {
+    "60": "/icons-9cabfa99ba634cbba6ff4336b9f30d2b/firefox_app_60x60.png",
+    "128": "/icons-9cabfa99ba634cbba6ff4336b9f30d2b/firefox_app_128x128.png",
+    "512": "/icons-9cabfa99ba634cbba6ff4336b9f30d2b/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}

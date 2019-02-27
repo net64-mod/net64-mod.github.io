@@ -12,13 +12,13 @@ const IndexPage = () => (
         <h1>Hi people</h1>
         <p>Welcome to Net64.</p>
         <p>
-          <Button label="Download the client" to="/net64plus/" />
+          <Button to="/net64plus/">Download the client</Button>
         </p>
         <p>
-          <Button label="Server Hosting" to="/hosting/" />
+          <Button to="/hosting/">Server Hosting</Button>
         </p>
         <p>
-          <Link to="/faq/">Read the FAQ</Link>
+          <Button to="/faq/">Read the FAQ</Button>
         </p>
       </Container>
     </Page>

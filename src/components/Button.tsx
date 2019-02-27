@@ -16,15 +16,14 @@ const StyledButton = styled.div`
 `
 
 interface ButtonProps {
-  label: string
   to: string
   img?: string
 }
 
-const Button: React.SFC<ButtonProps> = ({ label, to, img }) => (
+const Button: React.SFC<ButtonProps> = ({ to, img, children }) => (
   <Link to={to}>
     {img && <img src={img} />}
-    <StyledButton>{label}</StyledButton>
+    <StyledButton>{children}</StyledButton>
   </Link>
 )
 

@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "lts"
+
+jobs:
+  include:
+    - stage: Build
+      script: yarn build
+    - stage: Deploy
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        target-branch: master
+        on:
+          branch: develop

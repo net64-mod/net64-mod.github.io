@@ -58,6 +58,12 @@ module.exports = {
           families: ['Open Sans']
         }
       }
+    },
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/images/favicon.png'
+      }
     }
   ]
 }

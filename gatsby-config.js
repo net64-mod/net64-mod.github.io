@@ -33,6 +33,7 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-component',
+          'gatsby-remark-external-links',
           {
             resolve: 'gatsby-remark-images',
             options: {

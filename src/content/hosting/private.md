@@ -16,5 +16,5 @@ Joining via internet is only possible, if you correctly port forwarded. Port for
 - this is your router's web interface. You will have to log in with your credentials
 - the next steps heavily depend on the router you are using. You will have to find an entry about port forwarding and set it up for the respective port that you want to use
 
-If you want your server to be publicly visibile, you will have to get an API key from <ExternalLink href='https://smmdb.ddns.net/profile'>SMMDB profile page</ExternalLink>.
+If you want your server to be publicly visibile, you will have to get an API key from [SMMDB profile page](https://smmdb.ddns.net/profile).
 Never share your API key with anyone!

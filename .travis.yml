@@ -6,9 +6,10 @@ jobs:
   include:
     - stage: Test
       script: yarn test
-      name: "Build"
+      name: "Test"
+    - name: "Build"
       script: yarn build
-      name: "Deploy"
+    - name: "Deploy"
       deploy:
         provider: pages
         skip-cleanup: true

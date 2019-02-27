@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "lts/*"
+
+jobs:
+  include:
+    - stage: Test
+      script: yarn test
+      name: "Build"
+      script: yarn build
+      name: "Deploy"
+      deploy:
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        target-branch: master
+        on:
+          branch: develop

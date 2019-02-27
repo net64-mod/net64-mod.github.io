@@ -4810,12 +4810,6 @@ gatsby-link@^2.0.7:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-canonical-urls@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.0.5.tgz#a047c207c7bc1a295bd9ca634cbabba4abf52d5e"
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-
 gatsby-plugin-emotion@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.0.1.tgz#ff0072b640ce9b4902fc6e08add310e1cdf3cb51"

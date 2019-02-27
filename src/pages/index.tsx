@@ -3,22 +3,16 @@ import * as React from 'react'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
-import Button from '../components/Button'
 
 const IndexPage = () => (
   <IndexLayout>
     <Page>
       <Container>
-        <h1>Hi people</h1>
-        <p>Welcome to Net64.</p>
+        <h1>Net64</h1>
         <p>
-          <Button to="/net64plus/">Download the client</Button>
-        </p>
-        <p>
-          <Button to="/hosting/">Server Hosting</Button>
-        </p>
-        <p>
-          <Button to="/faq/">Read the FAQ</Button>
+          Net64 is a modification for everyones favourite 3D Mario: Super Mario 64. Cooperate with your friends to collect all 120 stars and
+          show Bowser who's boss - or just beat each other up. The modification consists of a separate application that establishes a
+          connection between Super Mario 64 and the internet.
         </p>
       </Container>
     </Page>

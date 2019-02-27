@@ -5,9 +5,12 @@ import { Link } from 'gatsby'
 
 import { heights, dimensions, colors } from '../styles/variables'
 import Container from './Container'
+import Navigation from './Navigation'
+import { getEmSize } from '../styles/mixins'
 
 const StyledHeader = styled.header`
-  height: ${heights.header}px;
+  height: ${getEmSize(heights.header)}rem;
+  margin-top: ${getEmSize(heights.navigation)}rem;
   padding: 0 ${dimensions.containerPadding}rem;
   background-color: ${colors.brand};
   color: ${transparentize(0.5, colors.white)};
@@ -37,6 +40,26 @@ interface HeaderProps {
 
 const Header: React.SFC<HeaderProps> = ({ title }) => (
   <StyledHeader>
+    <Navigation
+      links={[
+        {
+          label: 'Home',
+          url: '/'
+        },
+        {
+          label: 'Download',
+          url: '/net64plus'
+        },
+        {
+          label: 'FAQ',
+          url: '/faq'
+        },
+        {
+          label: 'Hosting',
+          url: '/hosting'
+        }
+      ]}
+    />
     <HeaderInner>
       <HomepageLink to="/">{title}</HomepageLink>
     </HeaderInner>

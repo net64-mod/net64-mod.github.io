@@ -61,5 +61,10 @@ export const dimensions = {
 }
 
 export const heights = {
+  navigation: 28,
   header: 60
+}
+
+export const zIndices = {
+  navigation: 100
 }

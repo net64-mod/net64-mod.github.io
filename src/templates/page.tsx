@@ -1,17 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-// @ts-ignore
-import rehypeReact from 'rehype-react'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
-import Button from '../components/Button'
 import IndexLayout from '../layouts'
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: { button: Button }
-}).Compiler
+import { renderAst } from '../utils/rehype'
 
 interface PageTemplateProps {
   data: {

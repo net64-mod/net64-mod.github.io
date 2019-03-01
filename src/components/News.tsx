@@ -59,6 +59,7 @@ const News: React.SFC<{}> = () => (
             title={edge.node.childMarkdownRemark.frontmatter.title}
             birthTime={edge.node.birthTime}
             modifiedTime={edge.node.modifiedTime}
+            key={`${edge.node.birthTime}.${edge.node.childMarkdownRemark.frontmatter.title}`}
           >
             {renderAst(edge.node.childMarkdownRemark.htmlAst)}
           </NewsEntry>

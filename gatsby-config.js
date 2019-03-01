@@ -88,6 +88,12 @@ module.exports = {
         anonymize: true,
         respectDNT: true,
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: '82aQUoC-35flkWcJCNd4ormLSk0J_v6A3uuTMT3yHRA'
+      },
     }
   ]
 }

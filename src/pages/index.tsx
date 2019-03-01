@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
+import DownloadButton from '../components/DownloadButton'
 import News from '../components/News'
 import IndexLayout from '../layouts'
 
@@ -15,6 +16,7 @@ const IndexPage = () => (
           show Bowser who's boss - or just beat each other up. The modification consists of a separate application that establishes a
           connection between Super Mario 64 and the internet.
         </p>
+        <DownloadButton />
       </Container>
       <Container>
         <News />

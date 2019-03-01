@@ -26,7 +26,7 @@ interface NavigationProps {
 const Navigation: React.SFC<NavigationProps> = ({ links }) => (
   <StyledNavigation>
     {links.map(pageLink => (
-      <NavigationLink link={pageLink} />
+      <NavigationLink link={pageLink} key={pageLink.url} />
     ))}
   </StyledNavigation>
 )

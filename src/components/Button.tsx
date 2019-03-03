@@ -35,7 +35,7 @@ const StyledButton = styled.div`
     padding: ${getEmSize(6)}em;
     color: ${colors.brand};
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: none !important;
     outline: 0;
   }
 `

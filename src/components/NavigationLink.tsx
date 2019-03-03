@@ -15,7 +15,7 @@ const StyledNavigationLink = styled.div`
   a {
     outline: 0;
     padding: ${getEmSize(25)}em;
-    text-decoration: none;
+    text-decoration: none !important;
     color: ${colors.brand};
     -webkit-touch-callout: none;
     -webkit-user-select: none;

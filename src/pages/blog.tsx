@@ -7,11 +7,9 @@ import IndexLayout from '../layouts'
 const BlogPage = () => (
   <IndexLayout>
     <Page>
-      <Container>
-          
-      </Container>
+      <Container />
     </Page>
   </IndexLayout>
 )
 
-export default BlogPage  
+export default BlogPage

@@ -16,7 +16,9 @@ const IndexPage = () => (
           show Bowser who's boss - or just beat each other up. The modification consists of a separate application that establishes a
           connection between Super Mario 64 and the internet.
         </p>
-        <Button to='/download' img='net64.svg'>Download Net64Plus »</Button>
+        <Button to="/download" img="net64.svg">
+          Download Net64Plus »
+        </Button>
       </Container>
       <Container>
         <News />

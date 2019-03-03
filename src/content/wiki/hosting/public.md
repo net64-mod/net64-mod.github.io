@@ -3,22 +3,8 @@ layout: page
 title: "Net64+ - Dedicated Server Hosting"
 ---
 
-[![Discord](https://discordapp.com/api/guilds/354358899328942081/widget.png)](https://discord.gg/net64)
-[![Build Status](https://api.travis-ci.org/Tarnadas/net64plus-server.svg?branch=master)](https://travis-ci.org/Tarnadas/net64plus-server)
-[![Coverage Status](https://coveralls.io/repos/github/Tarnadas/net64plus-server/badge.svg?branch=master)](https://coveralls.io/github/Tarnadas/net64plus-server?branch=master)
 
-Net64 aka SM64O allows playing Super Mario 64 in an online multiplayer mode. Net64+ is the official continuation of the program and features an integrated server list.
-
-This repository includes the dedicated server software. For the client please visit the [client repository](https://github.com/Tarnadas/net64plus).
-
-## Server List
-
-There is a [public server list](https://smmdb.ddns.net/net64) of all Net64+ server, that have enabled listing.
-
-## Downloads
-
-For user servers, there is a prebuilt Windows version with a few limitations, but it is much easier to host in general.
-The prebuilt version is bundled with the [Net64+ Client](https://github.com/Tarnadas/net64plus/releases), but you can also download it in the [release section](https://github.com/Tarnadas/net64plus-server/releases).
+This guide shows how to install a dedicated server. If you just want to play with your friends you might be better of creating a [private server](/hosting/private) since it's a lot easier.
 
 ## Installation
 

@@ -5,9 +5,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'modern-normalize'
 import '../styles/normalize'
 
-import Header from '../components/Header'
+import MainNavigation from '../components/MainNavigation'
 import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
+import Footer from '../components/Footer'
 
 type StaticQueryProps = {
   site: {
@@ -39,8 +40,9 @@ const IndexLayout: React.SFC = ({ children }) => (
             { name: 'keywords', content: 'net64, super, mario, 64, online' }
           ]}
         />
-        <Header title={data.site.siteMetadata.title} />
+        <MainNavigation />
         <LayoutMain>{children}</LayoutMain>
+        <Footer />
       </LayoutRoot>
     )}
   />

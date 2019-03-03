@@ -48,7 +48,7 @@ export default class DownloadButton extends React.PureComponent<{}, DownloadButt
     const { to } = this.state
     return (
       <Button to={to} img="net64.svg">
-        Download Net64+
+        Download Net64Plus
       </Button>
     )
   }

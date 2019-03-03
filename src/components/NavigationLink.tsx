@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
+import { colors } from '../styles/variables'
 import { getEmSize } from '../styles/mixins'
 
 export interface PageLink {
@@ -10,9 +11,21 @@ export interface PageLink {
 }
 
 const StyledNavigationLink = styled.div`
-  margin: 0 ${getEmSize(12)}rem;
+  display: inline-block;
   a {
-    color: white;
+    outline: 0;
+    padding: ${getEmSize(25)}em;
+    text-decoration: none;
+    color: ${colors.brand};
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  &:hover {
+    background-image: linear-gradient(to top, #e8e8e8 , #fcfcfc);
   }
 `
 

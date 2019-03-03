@@ -2,19 +2,29 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 
 import { getEmSize } from '../styles/mixins'
+import { colors } from '../styles/variables'
 import { Link, StaticQuery, graphql } from 'gatsby'
 
 const StyledButton = styled.div`
+  font-size: ${getEmSize(20)}em;
   display: inline-flex;
-  padding: ${getEmSize(6)}em;
   cursor: pointer;
-  border-radius: ${getEmSize(6)}em;
-  background-color: rgb(255, 229, 0);
-  box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 13px 0px;
+  border-radius: 1000px;
+  border-color: ${colors.gray.copy};
+  background-color: ${colors.white};
+  box-shadow: 0 ${getEmSize(5)}em ${getEmSize(15)}em ${getEmSize(3)}em ${colors.gray.copy};
 
   &:hover {
-    background-color: rgb(50, 50, 69);
+    background-color: ${colors.lilac};
+    box-shadow: 0 ${getEmSize(10)}em ${getEmSize(10)}em ${getEmSize(5)}em ${colors.gray.copy};
+    a {
+      color: white;
+    }
+  }
 
+  &:active {
+    box-shadow: none;
+    background-color: ${colors.lilac};
     a {
       color: white;
     }
@@ -22,9 +32,11 @@ const StyledButton = styled.div`
 
   a {
     display: flex;
-    color: black;
+    padding: ${getEmSize(6)}em;
+    color: ${colors.brand};
     font-weight: 600;
     text-decoration: none;
+    outline: 0;
   }
 `
 

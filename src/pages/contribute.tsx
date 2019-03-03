@@ -7,11 +7,9 @@ import IndexLayout from '../layouts'
 const ContributingPage = () => (
   <IndexLayout>
     <Page>
-      <Container>
-          
-      </Container>
+      <Container />
     </Page>
   </IndexLayout>
 )
 
-export default ContributingPage 
+export default ContributingPage

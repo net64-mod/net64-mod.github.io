@@ -9,10 +9,14 @@ const StyledPage = styled.div`
   position: relative;
   padding: ${dimensions.containerPadding}rem;
   background-color: ${colors.gray.calm};
-  & h1, h2 {
+
+  & h1,
+  h2 {
     color: ${colors.brand};
   }
-  & h3, h4 {
+
+  & h3,
+  h4 {
     color: ${colors.gray.dark};
   }
 `

@@ -25,7 +25,7 @@ const StyledNavigationLink = styled.div`
     user-select: none;
   }
   &:hover {
-    background-image: linear-gradient(to top, #e8e8e8 , #fcfcfc);
+    background-image: linear-gradient(to top, #e8e8e8, #fcfcfc);
   }
 `
 

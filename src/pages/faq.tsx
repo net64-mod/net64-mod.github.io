@@ -7,11 +7,9 @@ import IndexLayout from '../layouts'
 const FAQPage = () => (
   <IndexLayout>
     <Page>
-      <Container>
-          
-      </Container>
+      <Container />
     </Page>
   </IndexLayout>
 )
 
-export default FAQPage 
+export default FAQPage

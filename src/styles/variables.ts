@@ -22,8 +22,7 @@ export const colors = {
 }
 
 export const fonts = {
-  sansSerif:
-    'Lato, sans-serif',
+  sansSerif: 'Lato, sans-serif',
   serif: 'Georgia, "Times New Roman", Times, serif',
   monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
 }

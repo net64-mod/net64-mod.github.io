@@ -1,14 +1,15 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+import { Link, StaticQuery, graphql } from 'gatsby'
 
 import { getEmSize } from '../styles/mixins'
 import { colors } from '../styles/variables'
-import { Link, StaticQuery, graphql } from 'gatsby'
 
 const StyledButton = styled.div`
   font-size: ${getEmSize(20)}em;
   display: inline-flex;
   cursor: pointer;
+  margin-bottom: 0.6rem;
   border-radius: 1000px;
   border-color: ${colors.gray.copy};
   background-color: ${colors.white};
@@ -86,10 +87,7 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }) => (
   <StaticQuery
     query={graphql`
       query ButtonQuery {
-        allFile(
-          filter: { sourceInstanceName: { eq: "images" }, relativePath: { eq: "net64.svg" } }
-          sort: { fields: [birthTime], order: DESC }
-        ) {
+        allFile(filter: { sourceInstanceName: { eq: "images" } }) {
           edges {
             node {
               absolutePath
@@ -100,7 +98,8 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }) => (
       }
     `}
     render={(data: StaticQueryProps) => {
-      const image = img ? require(`../images/${data.allFile.edges[0].node.relativePath}`) : undefined
+      const buttonImg = data.allFile.edges.find(edge => edge.node.relativePath === img)
+      const image = buttonImg ? require(`../images/${buttonImg.node.relativePath}`) : undefined
       return (
         <StyledButton>
           {to.includes('//') ? (

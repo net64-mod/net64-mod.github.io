@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Net64 Troubleshooting"
+title: "Troubleshooting"
 ---
 
 ### I want to play a different gamemode, how do I change it?

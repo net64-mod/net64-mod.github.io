@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Net64+ - Server Hosting"
+title: "Server Hosting"
 ---
 
 You can host your own server by visiting the hosting page.

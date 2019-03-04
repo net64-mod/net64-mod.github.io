@@ -2,8 +2,9 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Net64 - Super Mario 64 Online',
+    title: 'Net64',
     description: 'Official website for Net64, a Super Mario 64 mod for playing online.',
+    keywords: ['net64', 'super', 'mario', '64', 'online', 'rom', 'hack', 'multiplayer'],
     siteUrl: 'https://net64-mod.github.io',
     author: {
       name: 'Mario Reder',

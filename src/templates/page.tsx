@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Page from '../components/Page'
@@ -12,6 +13,7 @@ interface PageTemplateProps {
       siteMetadata: {
         title: string
         description: string
+        keywords: string
         author: {
           name: string
           url: string
@@ -23,21 +25,36 @@ interface PageTemplateProps {
       excerpt: string
       frontmatter: {
         title: string
+        description?: string
+        keywords?: string
       }
     }
   }
 }
 
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <IndexLayout>
-    <Page>
-      <Container>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        <div>{renderAst(data.markdownRemark.htmlAst)}</div>
-      </Container>
-    </Page>
-  </IndexLayout>
-)
+const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => {
+  const title = `${data.site.siteMetadata.title} - ${data.markdownRemark.frontmatter.title}`
+  return (
+    <IndexLayout>
+      <Helmet
+        title={title}
+        meta={[
+          { name: 'description', content: `${data.markdownRemark.frontmatter.description}\n${data.site.siteMetadata.description || ''}` },
+          {
+            name: 'keywords',
+            content: [...data.site.siteMetadata.keywords, ...(data.markdownRemark.frontmatter.keywords || [])].join(', ')
+          }
+        ]}
+      />
+      <Page>
+        <Container>
+          <h1>{title}</h1>
+          <div>{renderAst(data.markdownRemark.htmlAst)}</div>
+        </Container>
+      </Page>
+    </IndexLayout>
+  )
+}
 
 export default PageTemplate
 
@@ -47,6 +64,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        keywords
         author {
           name
           url
@@ -58,6 +76,8 @@ export const query = graphql`
       excerpt
       frontmatter {
         title
+        description
+        keywords
       }
     }
   }

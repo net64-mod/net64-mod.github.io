@@ -21,14 +21,14 @@ interface DownloadButtonState {
 }
 
 export default class DownloadButton extends React.PureComponent<{}, DownloadButtonState> {
-  constructor(props: {}) {
+  public constructor(props: {}) {
     super(props)
     this.state = {
       to: 'https://github.com/tarnadas/net64plus/releases'
     }
   }
 
-  public async componentDidMount() {
+  public async componentDidMount(): Promise<void> {
     const releases = await this.getGithubReleases()
     for (const release of releases) {
       if (!this.isReleaseValid(release)) continue
@@ -43,7 +43,7 @@ export default class DownloadButton extends React.PureComponent<{}, DownloadButt
     }
   }
 
-  public render() {
+  public render(): JSX.Element {
     const { to } = this.state
     return (
       <Button to={to} img="net64.svg">
@@ -60,7 +60,7 @@ export default class DownloadButton extends React.PureComponent<{}, DownloadButt
     return true
   }
 
-  private async getGithubReleases() {
+  private async getGithubReleases(): Promise<Release[]> {
     return (await axios.request<Release[]>({
       method: 'get',
       url: 'https://api.github.com/repos/tarnadas/net64plus/releases',

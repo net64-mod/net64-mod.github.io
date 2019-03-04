@@ -5,7 +5,7 @@ import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
 
-const NotFoundPage = () => (
+const NotFoundPage = (): JSX.Element => (
   <IndexLayout>
     <Page>
       <Container>

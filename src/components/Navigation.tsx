@@ -34,7 +34,7 @@ interface NavigationProps {
   links: PageLink[]
 }
 
-const Navigation: React.SFC<NavigationProps> = ({ links }) => (
+const Navigation: React.SFC<NavigationProps> = ({ links }): JSX.Element => (
   <StyledNavigation>
     <div>
       {links.map(pageLink => (

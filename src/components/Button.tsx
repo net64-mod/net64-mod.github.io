@@ -62,7 +62,7 @@ interface ButtonProps {
   img?: string
 }
 
-type StaticQueryProps = {
+interface StaticQueryProps {
   allFile: {
     edges: {
       node: {
@@ -73,7 +73,7 @@ type StaticQueryProps = {
   }
 }
 
-const getContent = (children: React.ReactNode, img?: string) => (
+const getContent = (children: React.ReactNode, img?: string): JSX.Element => (
   <>
     {img && (
       <ImgWrapper>
@@ -83,7 +83,7 @@ const getContent = (children: React.ReactNode, img?: string) => (
     <Label>{children}</Label>
   </>
 )
-const Button: React.SFC<ButtonProps> = ({ to, img, children }) => (
+const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
   <StaticQuery
     query={graphql`
       query ButtonQuery {

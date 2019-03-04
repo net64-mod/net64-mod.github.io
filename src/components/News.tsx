@@ -12,7 +12,7 @@ const StyledNews = styled.div`
   margin-top: 3rem;
 `
 
-type StaticQueryProps = {
+interface StaticQueryProps {
   allFile: {
     edges: {
       node: {
@@ -30,7 +30,7 @@ type StaticQueryProps = {
   }
 }
 
-const News: React.SFC<{}> = () => (
+const News: React.SFC<{}> = (): JSX.Element => (
   <StaticQuery
     query={graphql`
       query IndexPageQuery {

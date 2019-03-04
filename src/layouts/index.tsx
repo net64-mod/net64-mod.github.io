@@ -10,7 +10,7 @@ import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
 import Footer from '../components/Footer'
 
-type StaticQueryProps = {
+interface StaticQueryProps {
   site: {
     siteMetadata: {
       title: string
@@ -19,7 +19,7 @@ type StaticQueryProps = {
   }
 }
 
-const IndexLayout: React.SFC = ({ children }) => (
+const IndexLayout: React.SFC = ({ children }): JSX.Element => (
   <StaticQuery
     query={graphql`
       query IndexLayoutQuery {

@@ -37,7 +37,7 @@ interface NewsEntryProps {
   modifiedTime: string
 }
 
-const NewsEntry: React.SFC<NewsEntryProps> = ({ author, title, birthTime, children }) => {
+const NewsEntry: React.SFC<NewsEntryProps> = ({ author, title, birthTime, children }): JSX.Element => {
   const timestamp = new Date(birthTime).toLocaleDateString()
   return (
     <StyledNewsEntry>

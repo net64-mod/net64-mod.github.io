@@ -39,6 +39,7 @@ export default class DownloadButton extends React.PureComponent<{}, DownloadButt
         this.setState({
           to: downloadUrl
         })
+        return
       }
     }
   }

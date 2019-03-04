@@ -32,7 +32,6 @@ export default class DownloadButton extends React.PureComponent<{}, DownloadButt
     const releases = await this.getGithubReleases()
     for (const release of releases) {
       if (!this.isReleaseValid(release)) continue
-      console.log('VALID', release)
       for (const asset of release.assets) {
         if (asset.name == null || !asset.name.includes('64plus')) continue
         const downloadUrl = asset.browser_download_url

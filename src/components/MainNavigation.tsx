@@ -9,30 +9,14 @@ const Header: React.SFC = () => (
         label: 'Home',
         url: '/'
       },
-      /*{
-          label: 'About',
-          url: '/about'
-        },*/
       {
         label: 'Download',
         url: '/download'
       },
-      /*{
-          label: 'Blog',
-          url: '/blog'
-        },
-        {
-          label: 'FAQ',
-          url: '/faq'
-        },*/
       {
         label: 'Wiki',
-        url: '/wiki/main'
+        url: '/wiki'
       },
-      /*{
-          label: 'Contribute',
-          url: '/contribute'
-        },*/
       {
         label: 'Social',
         url: 'social'

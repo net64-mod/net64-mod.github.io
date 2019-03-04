@@ -1,6 +1,8 @@
 ---
 layout: page
-title: "Net64 Wiki"
+title: "Wiki"
+description: "Net64 Wiki."
+keywords: ["wiki", "troubleshooting", "hosting"]
 ---
 
 |**Contents**|

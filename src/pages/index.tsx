@@ -6,7 +6,7 @@ import Button from '../components/Button'
 import News from '../components/News'
 import IndexLayout from '../layouts'
 
-const IndexPage = () => (
+const IndexPage = (): JSX.Element => (
   <IndexLayout>
     <Page>
       <Container>

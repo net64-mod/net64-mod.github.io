@@ -10,8 +10,8 @@ keywords: ["social", "media", "discord", "reddit"]
 Review the following before joining our Server:
 
 - **Piracy is prohibited.** Linking to or discussing pirated ROMs is forbidden. **Do not** ask for ROMs etc.
-- **Having trouble installing Net64?** Checkout [/wiki/troubleshooting](troubleshooting).
-- **Want a quick answer?** Have a look at our [/faq](FAQ).
+- **Having trouble installing Net64?** Checkout [troubleshooting](/wiki/troubleshooting).
+- **Want a quick answer?** Have a look at our [FAQ](/faq).
 - **Can I play this on Android?** No.
 
 If you have read everything you can join our Discord here:

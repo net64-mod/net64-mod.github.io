@@ -33,7 +33,7 @@ interface StaticQueryProps {
 const News: React.SFC<{}> = (): JSX.Element => (
   <StaticQuery
     query={graphql`
-      query IndexPageQuery {
+      query NewsQuery {
         allFile(filter: { sourceInstanceName: { eq: "news" } }, sort: { fields: [birthTime], order: DESC }) {
           edges {
             node {

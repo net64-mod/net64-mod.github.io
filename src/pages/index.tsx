@@ -4,12 +4,14 @@ import Page from '../components/Page'
 import Container from '../components/Container'
 import Button from '../components/Button'
 import News from '../components/News'
+import SEO from '../components/SEO'
 import IndexLayout from '../layouts'
 
 const IndexPage = (): JSX.Element => (
   <IndexLayout>
     <Page>
       <Container>
+        <SEO />
         <h1>Net64</h1>
         <p>
           Net64 is a modification for everyones favourite 3D Mario: Super Mario 64. Cooperate with your friends to collect all 120 stars and

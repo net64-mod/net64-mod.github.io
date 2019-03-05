@@ -1,6 +1,4 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
 
 import 'modern-normalize'
 import '../styles/normalize'
@@ -10,42 +8,12 @@ import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
 import Footer from '../components/Footer'
 
-interface StaticQueryProps {
-  site: {
-    siteMetadata: {
-      title: string
-      description: string
-    }
-  }
-}
-
 const IndexLayout: React.SFC = ({ children }): JSX.Element => (
-  <StaticQuery
-    query={graphql`
-      query IndexLayoutQuery {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
-      }
-    `}
-    render={(data: StaticQueryProps) => (
-      <LayoutRoot>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: 'net64, super, mario, 64, online' }
-          ]}
-        />
-        <MainNavigation />
-        <LayoutMain>{children}</LayoutMain>
-        <Footer />
-      </LayoutRoot>
-    )}
-  />
+  <LayoutRoot>
+    <MainNavigation />
+    <LayoutMain>{children}</LayoutMain>
+    <Footer />
+  </LayoutRoot>
 )
 
 export default IndexLayout

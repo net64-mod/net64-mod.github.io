@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   switch (node.internal.type) {
     case 'MarkdownRemark': {
       const { permalink, layout } = node.frontmatter
-      const { relativePath } = getNode(node.parent)
+      const { relativePath, sourceInstanceName } = getNode(node.parent)
 
       let slug = permalink
 
@@ -27,6 +27,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         name: 'layout',
         value: layout || ''
       })
+
+      createNodeField({
+        node,
+        name: 'instanceName',
+        value: sourceInstanceName || ''
+      })
     }
   }
 }
@@ -42,6 +48,7 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               layout
               slug
+              instanceName
             }
           }
         }
@@ -55,7 +62,9 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const { slug, layout } = node.fields
+    const { slug, layout, instanceName } = node.fields
+
+    if (instanceName !== 'content') return
 
     createPage({
       path: slug,

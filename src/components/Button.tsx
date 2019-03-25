@@ -103,7 +103,7 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
       return (
         <StyledButton>
           {to.includes('//') ? (
-            <a href={to} target="_blank" rel="noopener norefferer">
+            <a href={to} target="_blank" rel="noopener noreferrer">
               {getContent(children, image)}
             </a>
           ) : (

@@ -14,6 +14,10 @@ const Header: React.SFC = (): JSX.Element => (
         url: '/download'
       },
       {
+        label: 'Servers',
+        url: '/servers'
+      },
+      {
         label: 'Wiki',
         url: '/wiki'
       },

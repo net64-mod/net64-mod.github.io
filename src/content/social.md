@@ -1,8 +1,8 @@
 ---
 layout: page
 title: 'Social'
-description: 'Net64 social network links to Discord and Reddit.'
-keywords: ['social', 'media', 'discord', 'reddit']
+description: 'Net64 social network links to Discord.'
+keywords: ['social', 'media', 'discord']
 ---
 
 ## Discord
@@ -17,7 +17,3 @@ Review the following before joining our Server:
 If you have read everything you can join our Discord here:
 
 [![Join our Discord](https://discordapp.com/api/guilds/559982917049253898/widget.png?style=banner2)](https://discord.gg/GgGUKH8)
-
-## Reddit
-
-<button to="https://reddit.com/r/Net64" img="reddit.svg">Reddit</button>

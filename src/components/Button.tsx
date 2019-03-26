@@ -34,7 +34,7 @@ const StyledButton = styled.div`
   a {
     display: flex;
     padding: ${getEmSize(6)}em;
-    color: ${colors.brand};
+    color: ${colors.brand.normal};
     font-weight: 600;
     text-decoration: none !important;
     outline: 0;

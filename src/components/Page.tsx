@@ -12,7 +12,7 @@ const StyledPage = styled.div`
 
   & h1,
   h2 {
-    color: ${colors.brand};
+    color: ${colors.brand.normal};
   }
 
   & h3,

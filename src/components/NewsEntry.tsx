@@ -21,7 +21,7 @@ const StyledNewsEntry = styled.div`
 const StyledHeader = styled.div`
   font-size: 2rem;
   font-weight: bold;
-  color: ${colors.brand};
+  color: ${colors.brand.normal};
 `
 
 const StyledSubHeader = styled.div`

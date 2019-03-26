@@ -1,7 +1,11 @@
 /* tslint:disable:max-line-length */
 
 export const colors = {
-  brand: '#ff7b0a',
+  brand: {
+    normal: '#ff7b0a',
+    secondary: '#f1ecbc',
+    tertiary: '#f8ca00'
+  },
   lilac: '#ffb050',
   accent: '#2c0e9a',
   success: '#37b635',

@@ -14,7 +14,7 @@ export default `
 
   html {
     font-size: ${dimensions.fontSize.regular}px !important;
-    line-height: ${dimensions.lineHeight.regular} !important;
+    line-height: ${dimensions.lineHeight.regular};
   }
 
   body {

@@ -58,7 +58,7 @@ const Label = styled.div`
 `
 
 interface ButtonProps {
-  to: string
+  to?: string
   img?: string
 }
 
@@ -102,12 +102,16 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
       const image = buttonImg ? require(`../images/${buttonImg.node.relativePath}`) : undefined
       return (
         <StyledButton>
-          {to.includes('//') ? (
-            <a href={to} target="_blank" rel="noopener noreferrer">
-              {getContent(children, image)}
-            </a>
+          {to ? (
+            to.includes('//') ? (
+              <a href={to} target="_blank" rel="noopener noreferrer">
+                {getContent(children, image)}
+              </a>
+            ) : (
+              <Link to={to}>{getContent(children, image)}</Link>
+            )
           ) : (
-            <Link to={to}>{getContent(children, image)}</Link>
+            getContent(children, image)
           )}
         </StyledButton>
       )

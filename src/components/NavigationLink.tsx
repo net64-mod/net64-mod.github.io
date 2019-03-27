@@ -2,8 +2,10 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-import { colors } from '../styles/variables'
+import { colors, heights } from '../styles/variables'
 import { getEmSize } from '../styles/mixins'
+
+const navigationPadding = 5
 
 export interface PageLink {
   label: string
@@ -11,10 +13,14 @@ export interface PageLink {
 }
 
 const StyledNavigationLink = styled.div`
-  display: inline-block;
+  display: inline-flex;
+  align-items: stretch;
+  flex-direction: column;
+
   a {
     outline: 0;
-    padding: ${getEmSize(25)}em;
+    padding: ${getEmSize(navigationPadding)}rem ${getEmSize(25)}rem;
+    line-height: ${getEmSize(heights.navigation - 2 * navigationPadding)}rem;
     text-decoration: none !important;
     color: ${colors.brand.normal};
     -webkit-touch-callout: none;

@@ -13,7 +13,7 @@ To this day we don't fully understand his motivation for the shutdown and we wer
 ![discord strike](../images/news/discord_strike.png)
 
 This seems like a clear indication that said admin just wanted to damage the community as much as possible by abusing his power and our trust.
-On March 26th the he decided to prematurely delete this server as a result of various members sharing the new invite.
+On March 26th he decided to prematurely delete this server as a result of various members sharing the new invite.
 
 We think his actions are disrespectful to the rest of the team as well as to the members of the server. Such a decision should be discussed extensively with the whole team and not be made within one day by a single person because of a bad mood.
 It could have been a few clicks to just give ownership to someone else.

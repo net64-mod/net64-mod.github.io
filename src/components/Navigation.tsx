@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { useMedia } from 'react-use'
 import styled from '@emotion/styled'
 
 import NavigationLink, { PageLink } from './NavigationLink'
@@ -12,9 +11,8 @@ const StyledNavigationWrapper = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  height: ${({ isWide }: Partial<StyledNavigationProps>) => (isWide ? `${getEmSize(heights.navigation)}rem` : 'auto')};
-  max-height: ${({ isWide, visible }: Partial<StyledNavigationProps>) =>
-    isWide ? `${getEmSize(heights.navigation)}rem` : visible ? `${getEmSize(500)}rem` : '0'};
+  height: auto;
+  max-height: ${({ visible }: Partial<StyledNavigationProps>) => (visible ? `${getEmSize(500)}rem` : '0')};
   line-height: ${getEmSize(heights.navigation)}rem;
   width: 100%;
   z-index: ${zIndices.navigation};
@@ -28,6 +26,11 @@ const StyledNavigationWrapper = styled.div`
   overflow: hidden;
   box-shadow: 0 5px 15px 0px ${colors.gray.copy};
   transition: 1s ease max-height;
+
+  @media (min-width: ${breakpoints.md}px) {
+    height: ${getEmSize(heights.navigation)}rem;
+    max-height: ${getEmSize(heights.navigation)}rem;
+  }
 `
 
 const StyledNavigation = styled.div`
@@ -36,13 +39,11 @@ const StyledNavigation = styled.div`
   z-index: 101;
   max-width: ${getEmSize(widths.lg)}rem;
   margin: auto;
+  flex-direction: column;
 
-  ${({ isWide }: Partial<StyledNavigationProps>) =>
-    !isWide
-      ? `
-    flex-direction: column;
-  `
-      : ''}
+  @media (min-width: ${breakpoints.md}px) {
+    flex-direction: row;
+  }
 `
 
 const StyledNavigationBackground = styled.div`
@@ -88,8 +89,14 @@ const MenuButton = styled.div`
     }
   }
 `
+
+const MobileNavigation = styled.div`
+  @media (min-width: ${breakpoints.md}px) {
+    display: none;
+  }
+`
+
 interface StyledNavigationProps {
-  isWide: boolean
   visible: boolean
 }
 
@@ -98,23 +105,18 @@ interface NavigationProps {
 }
 
 const Navigation: React.SFC<NavigationProps> = ({ links }): JSX.Element => {
-  const query = `(min-width: ${breakpoints.md}px)`
-  const initIsWide = window.matchMedia(query).matches
-  const isWide = useMedia(query, initIsWide)
   const [visible, setVisible] = React.useState(false)
 
   return (
     <>
-      {!isWide && (
-        <>
-          <MenuButton onClick={() => setVisible(!visible)}>
-            <img src={require('../images/menu.svg')} />
-          </MenuButton>
-          <StyledNavigationBackground visible={visible} onClick={() => setVisible(false)} />
-        </>
-      )}
-      <StyledNavigationWrapper isWide={isWide} visible={visible}>
-        <StyledNavigation isWide={isWide} visible={visible}>
+      <MobileNavigation>
+        <MenuButton onClick={() => setVisible(!visible)}>
+          <img src={require('../images/menu.svg')} />
+        </MenuButton>
+        <StyledNavigationBackground visible={visible} onClick={() => setVisible(false)} />
+      </MobileNavigation>
+      <StyledNavigationWrapper visible={visible}>
+        <StyledNavigation>
           {links.map(pageLink => (
             <NavigationLink link={pageLink} key={pageLink.url} />
           ))}

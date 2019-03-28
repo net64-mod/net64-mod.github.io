@@ -83,7 +83,9 @@ interface NavigationProps {
 }
 
 const Navigation: React.SFC<NavigationProps> = ({ links }): JSX.Element => {
-  const isWide = useMedia(`(min-width: ${breakpoints.md}px)`)
+  const query = `(min-width: ${breakpoints.md}px)`
+  const initIsWide = window.matchMedia(query).matches
+  const isWide = useMedia(query, initIsWide)
   const [visible, setVisible] = React.useState(false)
 
   return (

@@ -21,10 +21,9 @@ interface StaticQueryProps {
           frontmatter: {
             author: string
             title: string
+            date: string
           }
         }
-        birthTime: string
-        modifiedTime: string
       }
     }[]
   }
@@ -42,10 +41,9 @@ const News: React.SFC<{}> = (): JSX.Element => (
                 frontmatter {
                   author
                   title
+                  date
                 }
               }
-              birthTime
-              modifiedTime
             }
           }
         }
@@ -57,9 +55,8 @@ const News: React.SFC<{}> = (): JSX.Element => (
           <NewsEntry
             author={edge.node.childMarkdownRemark.frontmatter.author}
             title={edge.node.childMarkdownRemark.frontmatter.title}
-            birthTime={edge.node.birthTime}
-            modifiedTime={edge.node.modifiedTime}
-            key={`${edge.node.birthTime}.${edge.node.childMarkdownRemark.frontmatter.title}`}
+            date={edge.node.childMarkdownRemark.frontmatter.date}
+            key={`${edge.node.childMarkdownRemark.frontmatter.date}.${edge.node.childMarkdownRemark.frontmatter.title}`}
           >
             {renderAst(edge.node.childMarkdownRemark.htmlAst)}
           </NewsEntry>

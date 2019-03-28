@@ -1,6 +1,7 @@
 ---
 author: 'Net64 Team'
 title: 'About the Discord Server Shutdown'
+date: '2019-03-27'
 ---
 
 If you haven't yet noticed, Net64 is going through a hard time and we, the developers, want to explain what is going on.

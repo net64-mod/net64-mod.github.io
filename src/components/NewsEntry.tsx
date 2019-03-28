@@ -33,11 +33,11 @@ const StyledSubHeader = styled.div`
 interface NewsEntryProps {
   author: string
   title: string
-  date: string
+  date: Date
 }
 
 const NewsEntry: React.SFC<NewsEntryProps> = ({ author, title, date, children }): JSX.Element => {
-  const timestamp = new Date(date).toLocaleDateString()
+  const timestamp = date.toLocaleDateString()
   return (
     <StyledNewsEntry>
       <StyledHeader>{title}</StyledHeader>

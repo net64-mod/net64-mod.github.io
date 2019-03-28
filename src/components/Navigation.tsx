@@ -8,11 +8,12 @@ import { getEmSize } from '../styles/mixins'
 
 const StyledNavigationWrapper = styled.div`
   position: fixed;
+  z-index: 101;
   top: 0;
   left: 0;
   right: 0;
-  height: ${({ isWide }: StyledNavigationProps) => (isWide ? `${getEmSize(heights.navigation)}rem` : 'auto')};
-  max-height: ${({ isWide, visible }: StyledNavigationProps) =>
+  height: ${({ isWide }: Partial<StyledNavigationProps>) => (isWide ? `${getEmSize(heights.navigation)}rem` : 'auto')};
+  max-height: ${({ isWide, visible }: Partial<StyledNavigationProps>) =>
     isWide ? `${getEmSize(heights.navigation)}rem` : visible ? `${getEmSize(500)}rem` : '0'};
   line-height: ${getEmSize(heights.navigation)}rem;
   width: 100%;
@@ -31,10 +32,12 @@ const StyledNavigationWrapper = styled.div`
 
 const StyledNavigation = styled.div`
   display: flex;
+  position: relative;
+  z-index: 101;
   max-width: ${getEmSize(widths.lg)}rem;
   margin: auto;
 
-  ${({ isWide }: StyledNavigationProps) =>
+  ${({ isWide }: Partial<StyledNavigationProps>) =>
     !isWide
       ? `
     flex-direction: column;
@@ -42,8 +45,20 @@ const StyledNavigation = styled.div`
       : ''}
 `
 
+const StyledNavigationBackground = styled.div`
+  position: fixed;
+  z-index: ${({ visible }: Partial<StyledNavigationProps>) => (visible ? '100' : '-1')};
+  background-color: ${({ visible }: Partial<StyledNavigationProps>) => (visible ? 'rgba(0, 0, 0, 0.5)' : '')};
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: 0.5s linear background-color;
+`
+
 const MenuButton = styled.div`
   position: fixed;
+  z-index: 1000;
   right: 0;
   width: ${getEmSize(heights.navigation)}rem;
   height: ${getEmSize(heights.navigation)}rem;
@@ -89,18 +104,23 @@ const Navigation: React.SFC<NavigationProps> = ({ links }): JSX.Element => {
   const [visible, setVisible] = React.useState(false)
 
   return (
-    <StyledNavigationWrapper isWide={isWide} visible={visible}>
+    <>
       {!isWide && (
-        <MenuButton onClick={() => setVisible(!visible)}>
-          <img src={require('../images/menu.svg')} />
-        </MenuButton>
+        <>
+          <MenuButton onClick={() => setVisible(!visible)}>
+            <img src={require('../images/menu.svg')} />
+          </MenuButton>
+          <StyledNavigationBackground visible={visible} onClick={() => setVisible(false)} />
+        </>
       )}
-      <StyledNavigation isWide={isWide} visible={visible}>
-        {links.map(pageLink => (
-          <NavigationLink link={pageLink} key={pageLink.url} />
-        ))}
-      </StyledNavigation>
-    </StyledNavigationWrapper>
+      <StyledNavigationWrapper isWide={isWide} visible={visible}>
+        <StyledNavigation isWide={isWide} visible={visible}>
+          {links.map(pageLink => (
+            <NavigationLink link={pageLink} key={pageLink.url} />
+          ))}
+        </StyledNavigation>
+      </StyledNavigationWrapper>
+    </>
   )
 }
 

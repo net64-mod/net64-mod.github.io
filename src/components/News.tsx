@@ -21,7 +21,7 @@ interface StaticQueryProps {
           frontmatter: {
             author: string
             title: string
-            date: string
+            date: string | Date
           }
         }
       }
@@ -51,16 +51,27 @@ const News: React.SFC<{}> = (): JSX.Element => (
     `}
     render={(data: StaticQueryProps) => (
       <StyledNews>
-        {data.allFile.edges.map(edge => (
-          <NewsEntry
-            author={edge.node.childMarkdownRemark.frontmatter.author}
-            title={edge.node.childMarkdownRemark.frontmatter.title}
-            date={edge.node.childMarkdownRemark.frontmatter.date}
-            key={`${edge.node.childMarkdownRemark.frontmatter.date}.${edge.node.childMarkdownRemark.frontmatter.title}`}
-          >
-            {renderAst(edge.node.childMarkdownRemark.htmlAst)}
-          </NewsEntry>
-        ))}
+        {data.allFile.edges
+          .map(edge => {
+            const date = edge.node.childMarkdownRemark.frontmatter.date
+            edge.node.childMarkdownRemark.frontmatter.date = new Date(date)
+            return edge
+          })
+          .sort(
+            (edge1, edge2) =>
+              (edge2.node.childMarkdownRemark.frontmatter.date as Date).valueOf() -
+              (edge1.node.childMarkdownRemark.frontmatter.date as Date).valueOf()
+          )
+          .map(edge => (
+            <NewsEntry
+              author={edge.node.childMarkdownRemark.frontmatter.author}
+              title={edge.node.childMarkdownRemark.frontmatter.title}
+              date={edge.node.childMarkdownRemark.frontmatter.date as Date}
+              key={`${edge.node.childMarkdownRemark.frontmatter.date}.${edge.node.childMarkdownRemark.frontmatter.title}`}
+            >
+              {renderAst(edge.node.childMarkdownRemark.htmlAst)}
+            </NewsEntry>
+          ))}
       </StyledNews>
     )}
   />

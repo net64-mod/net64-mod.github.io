@@ -1,4 +1,5 @@
 'use strict'
+/* eslint-disable */
 
 module.exports = {
   siteMetadata: {
@@ -13,6 +14,19 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Net64',
+        short_name: 'Net64',
+        start_url: '/',
+        background_color: '#f1ecbc',
+        theme_color: '#f1ecbc',
+        display: 'standalone',
+        icon: 'src/images/favicon.png'
+      }
+    },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

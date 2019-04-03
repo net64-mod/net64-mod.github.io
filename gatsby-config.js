@@ -64,7 +64,15 @@ module.exports = {
     'gatsby-transformer-json',
     'gatsby-plugin-emotion',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: true,
+        stripMetadata: true,
+        defaultQuality: 85,
+        pngCompressionSpeed: 1
+      }
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
@@ -79,7 +87,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: './src/images/favicon.png'
+        logo: './src/images/favicon.png',
+        icons: {
+          appleIcon: false
+        }
       }
     },
     {

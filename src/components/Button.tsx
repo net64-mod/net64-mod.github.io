@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import Img, { FluidObject } from 'gatsby-image'
 
 import { getEmSize } from '../styles/mixins'
 import { colors } from '../styles/variables'
@@ -68,18 +69,17 @@ interface StaticQueryProps {
       node: {
         absolutePath: string
         relativePath: string
+        childImageSharp?: {
+          fluid: FluidObject
+        }
       }
     }[]
   }
 }
 
-const getContent = (children: React.ReactNode, img?: string): JSX.Element => (
+const getContent = (children: React.ReactNode, img?: FluidObject | string): JSX.Element => (
   <>
-    {img && (
-      <ImgWrapper>
-        <img src={img} />
-      </ImgWrapper>
-    )}
+    {img && <ImgWrapper>{typeof img == 'string' ? <img src={img} /> : <Img fluid={img} />}</ImgWrapper>}
     <Label>{children}</Label>
   </>
 )
@@ -92,6 +92,11 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
             node {
               absolutePath
               relativePath
+              childImageSharp {
+                fluid(maxHeight: 36) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
             }
           }
         }
@@ -99,7 +104,11 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
     `}
     render={(data: StaticQueryProps) => {
       const buttonImg = data.allFile.edges.find(edge => edge.node.relativePath === img)
-      const image = buttonImg ? require(`../images/${buttonImg.node.relativePath}`) : undefined
+      const image: FluidObject | string | undefined = buttonImg
+        ? buttonImg.node.childImageSharp
+          ? buttonImg.node.childImageSharp.fluid
+          : require(`../images/${buttonImg.node.relativePath}`)
+        : undefined
       return (
         <StyledButton>
           {to ? (

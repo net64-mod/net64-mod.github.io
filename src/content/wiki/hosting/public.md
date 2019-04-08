@@ -3,7 +3,7 @@ layout: page
 title: "Dedicated Server Hosting"
 ---
 
-This guide shows how to install a dedicated server. If you just want to play with your friends you might be better of creating a [private server](/hosting/private) since it's a lot easier.
+This guide shows how to install a dedicated server. If you just want to play with your friends you might be better of creating a [private server](/wiki/hosting/private) since it's a lot easier.
 
 ## Installation
 

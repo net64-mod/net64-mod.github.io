@@ -15,7 +15,7 @@ date: '2019-07-16'
 
 <h2 id="current-state"> The Current State Of Net64</h2>
 
-You probably noticed that updates to anything regarding Net64 have become increasingly sparse and even if they happen they usually do not contain many changes. This is still the aftermath of Kaze (the initial developer) leaving Net64 over a year ago. Since then his part of the Net64 codebase has remained unchanged since it is not documented and we couldn't find anyone who is able to work on it. Either Kaze's code is crap or we're not enlightened enough to understand it. Either way we're not able to build on it further.
+You probably noticed that updates to anything regarding Net64 have become increasingly sparse and even if they happen they usually do not contain many changes. This is still the aftermath of Kaze (the initial developer) leaving Net64 over a year ago. Since then his part of the Net64 codebase has remained unchanged since it is not documented and we couldn't find anyone who is able to work on it. As such we're not able to build on it further.
 
 ---
 <h2 id="the-plan">The Plan</h2>

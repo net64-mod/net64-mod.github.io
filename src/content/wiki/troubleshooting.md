@@ -90,7 +90,7 @@ Currently there are no plans to natively support Mac/Linux. You can try to use a
 
 ### I downloaded a .zip file and all I see are weird files.  Where is Net64?
 
-You accidentally downloaded the source code, you need to download the 7z above the source code download ([Net64+ 2.0 Client is here](https://github.com/Tarnadas/net64plus/releases/tag/2.4.0)).  Also make sure you downloaded it either from the Net64 Discord or Tarandas’s Github
+You accidentally downloaded the source code, you need to download the 7z above the source code download ([Net64+ 2.0 Client is here](https://github.com/Tarnadas/net64plus/releases/latest)).  Also make sure you downloaded it either from the Net64 Discord or Tarnadas’ Github
 
 ### How do I extract the client from the RAR?
 

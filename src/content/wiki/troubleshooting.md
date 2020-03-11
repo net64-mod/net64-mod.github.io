@@ -23,6 +23,7 @@ Here’s a list of all gamemodes:
 
 1. Make sure your computer is 64-bits
 1. Try using a different server, sometimes it could be a connection/host problem
+1. Try pausing the emulator (`F2`) at the in-game file select screen while connecting Net64 to it and your desired server, then unpausing it (`F2` again) afterward. This may take a few attempts.
 1. Restart both the client and the emulator after making changes
 1. 16mb and counter factor only saves for that specific ROM, you need to change it each time you use a new ROM
 1. If you are getting disconnected, then it means you were idle (not playing) for around 5-10 minutes. This is a feature built into the client, make sure you are playing to prevent being disconnected.
@@ -31,13 +32,12 @@ Here’s a list of all gamemodes:
 
 ### When I join a Server Net64 Crashes
 
-Make sure you have the emulator on `16MB`. You do this by launching your ROM on Project64, going into `Options/Settings/Config<ROM Name>` and there will be a memory drop down menu. Click it and change from `4MB` to `16MB`.
+Make sure you have the emulator on `16MB`. You do this by launching your ROM on Project64MM, going into `Options/Settings/Config<ROM Name>` and there will be a memory drop down menu. Click it and change from `4MB` to `16MB`.
 
-**Occasionally these settings do reset, which causes Net64 (and potentially your emulator) to crash, so you might have to re-enter them multiple times.**
+### Changes I make in Settings (like Memory) revert when I press OK or Apply
 
-Make sure your emulator is unpaused (`F2`) before joining a server.
-If it is set correctly, try launching both the Emulator and Net64 as an Administrator (right click the exe, choose run as administrator).
-If the problem persists, check if your anti-virus and firewall have an exception made for Net64.
+Try launching both the Emulator and Net64 as an Administrator (right click the exe, choose run as administrator).
+If the problem persists, check if your anti-virus and firewall have an exception made for Net64. If either of these has additional features (like "Protected Folders"), you will need to whitelist Net64 and Project64MM in all of them.
 
 ### Net64 is not launching
 
@@ -47,6 +47,10 @@ Net64+ should launch normally, but if it doesn’t then first check if your comp
 
 If you have a Windows 10 computer right click the start button and and click System, under Device specifications and System Type will it show if you have a 64-bit operating system or a 32-bit.
 If your computer is 32-Bit, it is not supported by Net64 2.0.
+
+### "Cannot open a rom because plugins have not successfully initialised"
+
+This is almost always a result of a plugin (usually controller) not being set. Go to `Options/Settings/Plugins` and ensure none of the entries are blank. Aside from the graphics plugin (which MUST be `Glide64 Napalm WX Release 1`), which one to use for each is a matter of personal preference and compatibility with your hardware, so try different plugins as desired. (If no controller plugin seems to work, refer to the end of the "No Controller Error" entry below.)
 
 ### Popup Error “Unhandled R4300i OpCode at: 80914020”
 
@@ -72,7 +76,7 @@ To change your plugin to this; go to `Config/Settings/Plugins` on PJ64 then look
 This is an extremely common bug, and there is quite the list of what the issue could be.
 
 - Make sure you’re actually connected to a server.
-- Be sure that there is an exception made for Firewall and your Antivirus.
+- Be sure that there is an exception made for every part of your Firewall and Antivirus.
 - Run both Project64 and Net64 as admin.
 - This could also be a host problem so try to connect to a verified public server.
 
@@ -82,15 +86,15 @@ The Net64 tool requires a 64-bit computer, currently there are no plans for addi
 
 ### Are Mac and Linux Supported?
 
-Currently there are no plans to natively support Mac/Linux. However, you can try to use a “Virtual Machine” but there’s no guarantee that it will work.
+Currently there are no plans to natively support Mac/Linux. You can try to use a “Virtual Machine” but there’s no guarantee that it will work. Users have seemingly had the most success with Wine and WineTricks, but have yet to get it fully working.
 
 ### I downloaded a .zip file and all I see are weird files.  Where is Net64?
 
-You accidentally downloaded the source code, you need to download the 7z above the source code download ([Net64+ 2.0 Client is here](https://github.com/Tarnadas/net64plus/releases/tag/2.2.0)).  Also make sure you downloaded it either from the Net64 Discord or Tarandas’s Github
+You accidentally downloaded the source code, you need to download the 7z above the source code download ([Net64+ 2.0 Client is here](https://github.com/Tarnadas/net64plus/releases/tag/2.4.0)).  Also make sure you downloaded it either from the Net64 Discord or Tarandas’s Github
 
 ### How do I extract the client from the RAR?
 
-You need to use a program called "7-zip", once you download and install either one simply right-click on the file and click on `Extract`
+You need to use a program called "7-Zip", once you download and install either one simply right-click on the file and click on `Extract`
 
 ### I can’t find 16MB under Memory Size/The highest is only 8MB
 
@@ -118,7 +122,7 @@ Sometimes your Antivirus / Windows Defender, or other anti-virus software try to
 
 ### The graphics look pixelated?
 
-This happens when you press `backspace` on your keyboard. It's a feature that changes the filtering mode between "Bilinear", "Point-Sampled", and "Automatic". Just press `backspace` again to set it back to normal.
+This happens when you press `backspace` on your keyboard. It's a feature that changes the filtering mode between "Bilinear", "Point-Sampled", and "Automatic". Just press `backspace` one or two more times to set it back to normal.
 
 ### Microcode error
 
@@ -128,7 +132,20 @@ Net64 2.0 only works with `Glide64 Napalm WX Release 1`.  If you did change it, 
 
 ### Exception error: Line 259
 
-This error is caused by your graphics card, it means that the integrated graphics card (Usually a mobile chipset or something similar by Intel) cannot display the data from the Glide64 plugin. There is not much you can do to fix this issue other than attempting to update the video drivers of your graphics card.
+If this error is preceded by one about plugins, refer to the entry above on that one first.
+If not, or if this error persists after fixing that one: This is usually because of your graphics card, it means that the integrated graphics card (Usually a mobile chipset or something similar by Intel) cannot display the data from the Glide64 plugin. The first thing to try is to update the video drivers of your graphics card.
+
+If the error still persists, try the following:
+1. Go to `Options/Settings/Plugins`
+2. Change the graphics plugin to `Jabo's Direct3D6 1.5.2`
+3. Open Super Mario 64
+4. Wait until you see Mario's face (or until you get an error message)
+5. Go back to `Options/Settings/Plugins`
+6. Change the graphics plugin back to `Glide64 'Napalm WX' release 1`
+7. If you got an error message at step 4, reopen Super Mario 64
+8. If it's still not working, try again but with `Jabo's Direct3D8 1.6` in step 2 instead
+
+If none of the above works, you're probably out of luck.
 
 ### I can’t find any servers/ server list is blank
 

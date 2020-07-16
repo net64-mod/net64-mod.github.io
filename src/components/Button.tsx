@@ -103,7 +103,7 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
       }
     `}
     render={(data: StaticQueryProps) => {
-      const buttonImg = data.allFile.edges.find(edge => edge.node.relativePath === img)
+      const buttonImg = data.allFile.edges.find((edge) => edge.node.relativePath === img)
       const image: FluidObject | string | undefined = buttonImg
         ? buttonImg.node.childImageSharp
           ? buttonImg.node.childImageSharp.fluid

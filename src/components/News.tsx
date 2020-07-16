@@ -29,7 +29,7 @@ interface StaticQueryProps {
   }
 }
 
-const News: React.SFC<{}> = (): JSX.Element => (
+const News: React.SFC = (): JSX.Element => (
   <StaticQuery
     query={graphql`
       query NewsQuery {
@@ -52,7 +52,7 @@ const News: React.SFC<{}> = (): JSX.Element => (
     render={(data: StaticQueryProps) => (
       <StyledNews>
         {data.allFile.edges
-          .map(edge => {
+          .map((edge) => {
             const date = edge.node.childMarkdownRemark.frontmatter.date
             edge.node.childMarkdownRemark.frontmatter.date = new Date(date)
             return edge
@@ -62,7 +62,7 @@ const News: React.SFC<{}> = (): JSX.Element => (
               (edge2.node.childMarkdownRemark.frontmatter.date as Date).valueOf() -
               (edge1.node.childMarkdownRemark.frontmatter.date as Date).valueOf()
           )
-          .map(edge => (
+          .map((edge) => (
             <NewsEntry
               author={edge.node.childMarkdownRemark.frontmatter.author}
               title={edge.node.childMarkdownRemark.frontmatter.title}

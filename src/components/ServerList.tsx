@@ -33,10 +33,10 @@ const ServerListFetchStyled = styled.div`
   }
 `
 
-export default class ServerList extends React.PureComponent<{}, ServerListState> {
-  private mounted: boolean = false
+export default class ServerList extends React.PureComponent<null, ServerListState> {
+  private mounted = false
 
-  public constructor(props: {}) {
+  public constructor(props: null) {
     super(props)
     this.state = {
       servers: [],
@@ -83,7 +83,7 @@ export default class ServerList extends React.PureComponent<{}, ServerListState>
   }
 
   private renderServers(servers: Server[]): JSX.Element[] {
-    return servers.map(server => <ServerPanel key={server.id} server={server} />)
+    return servers.map((server) => <ServerPanel key={server.id} server={server} />)
   }
 
   public render(): JSX.Element {

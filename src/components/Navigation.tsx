@@ -117,7 +117,7 @@ const Navigation: React.SFC<NavigationProps> = ({ links }): JSX.Element => {
       </MobileNavigation>
       <StyledNavigationWrapper visible={visible}>
         <StyledNavigation>
-          {links.map(pageLink => (
+          {links.map((pageLink) => (
             <NavigationLink link={pageLink} key={pageLink.url} />
           ))}
         </StyledNavigation>

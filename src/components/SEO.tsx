@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { graphql, StaticQuery } from 'gatsby'
 
 import { Frontmatter } from '../models/Frontmatter'
@@ -57,7 +57,7 @@ const SEO: React.SFC<SEOProps> = ({ slug, frontmatter }): JSX.Element => (
       }
     `}
     render={(data: StaticQueryProps): JSX.Element => {
-      const edge = data.allMarkdownRemark.edges.find(edge => edge.node.fields.slug === slug)
+      const edge = data.allMarkdownRemark.edges.find((edge) => edge.node.fields.slug === slug)
       if (edge) {
         frontmatter = frontmatter || edge.node.frontmatter
       }

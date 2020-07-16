@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-  - 10.16.0
+  - 14.5.0
 
 jobs:
   include:
     - stage: Test
       script: yarn test
-      name: "Test"
-    - name: "Build & Deploy"
+      name: 'Test'
+    - name: 'Build & Deploy'
       script: yarn build
       deploy:
         provider: pages

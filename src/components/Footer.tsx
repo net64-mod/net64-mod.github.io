@@ -16,7 +16,7 @@ const StyledFooter = styled.div`
   color: ${colors.gray.dark};
 `
 
-const Footer: React.SFC<{}> = (): JSX.Element => (
+const Footer: React.SFC = (): JSX.Element => (
   <StyledFooter>
     <p>
       © 2019 Net64 Team - <a href="https://github.com/net64-mod/net64-mod.github.io">Website source code</a>

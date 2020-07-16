@@ -1,12 +1,12 @@
 import * as React from 'react'
-// @ts-ignore
 import rehypeReact from 'rehype-react'
 
 import Button from '../components/Button'
 import DownloadButton from '../components/DownloadButton'
 import ServerList from '../components/ServerList'
 
-export const renderAst = new rehypeReact({
+export const renderAst = rehypeReact({
   createElement: React.createElement,
-  components: { button: Button, 'download-button': DownloadButton, 'server-list': ServerList }
+  // TODO those typings seem to be wrong
+  components: { button: Button, 'download-button': DownloadButton as any, 'server-list': ServerList as any }
 }).Compiler

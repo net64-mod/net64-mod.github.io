@@ -20,8 +20,8 @@ interface DownloadButtonState {
   to: string
 }
 
-export default class DownloadButton extends React.PureComponent<{}, DownloadButtonState> {
-  public constructor(props: {}) {
+export default class DownloadButton extends React.PureComponent<null, DownloadButtonState> {
+  public constructor(props: null) {
     super(props)
     this.state = {
       to: 'https://github.com/tarnadas/net64plus/releases'
@@ -62,10 +62,12 @@ export default class DownloadButton extends React.PureComponent<{}, DownloadButt
   }
 
   private async getGithubReleases(): Promise<Release[]> {
-    return (await axios.request<Release[]>({
-      method: 'get',
-      url: 'https://api.github.com/repos/tarnadas/net64plus/releases',
-      timeout: 10000
-    })).data
+    return (
+      await axios.request<Release[]>({
+        method: 'get',
+        url: 'https://api.github.com/repos/tarnadas/net64plus/releases',
+        timeout: 10000
+      })
+    ).data
   }
 }

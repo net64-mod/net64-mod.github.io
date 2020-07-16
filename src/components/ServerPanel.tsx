@@ -123,7 +123,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
   }
 
   private handleToggle(event: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       display: !prevState.display
     }))
     event.preventDefault()
@@ -200,7 +200,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
 
   private renderPlayers(players: Player[]): JSX.Element[] {
     return players
-      .filter(player => player)
+      .filter((player) => player)
       .map((player, index) => (
         <PlayerStyled key={index}>
           <div className="img">
@@ -249,7 +249,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
             </div>
           )}
           <div style={styles.name}>{server.name || `${server.ip}:${server.port}`}</div>
-          <div style={styles.players}>{players.filter(player => player).length} / 24</div>
+          <div style={styles.players}>{players.filter((player) => player).length} / 24</div>
         </HeaderStyled>
         <DetailsWrapperStyled display={display}>
           <DetailsStyled>

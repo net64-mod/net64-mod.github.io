@@ -1,14 +1,16 @@
 ---
 layout: page
-title: "Dedicated Server Hosting"
+title: 'Dedicated Server Hosting'
 ---
 
 This guide shows how to install a dedicated server. If you just want to play with your friends you might be better of creating a [private server](/wiki/hosting/private) since it's a lot easier.
 
 ## Installation
 
-- download and install [Node 8](https://nodejs.org/en/download/)
+- download and install [Node 12](https://nodejs.org/en/download/)
   - you can try using a later version of Node, but you will need to install C++ compilers
+    - on Windows you can do the following: `npm i -g windows-build-tools` / or use `yarn global add`
+- install yarn. It's a package manager for npm, which is generally faster
 - `git clone` this repository or [download as zip](https://github.com/Tarnadas/net64plus-server/archive/master.zip)
 - modify `settings.json`
 
@@ -26,23 +28,23 @@ This guide shows how to install a dedicated server. If you just want to play wit
 }
 ```
 
-- (OPTIONAL) if you want your server to be listed, go to [SMMDB](https://smmdb.ddns.net), login with Google, go to profile and get your API key
-  - *Do not share your API key, because it gives full access to your account*
+- (OPTIONAL) if you want your server to be listed, go to [SMMDB](https://smmdb.net), login with Google, go to profile and get your API key
+  - _Do not share your API key, because it gives full access to your account_
   - You can only list one server per API key
   - `name` will be shortened to 40 characters at most
   - `description` will be shortened to 200 characters at most
   - `description` supports [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and [emojis](https://raw.githubusercontent.com/omnidan/node-emoji/master/lib/emoji.json)
 - open a terminal in the folder of your server and execute the following commands
 
-```
-$ npm install
-$ npm start
+```bash
+$ yarn install
+$ yarn start
 ```
 
 - (OPTIONAL) if you want to run your server indefinitely with auto restarts, I suggest to use pm2
 
-```
-$ npm i -g pm2
-$ npm run build
+```bash
+$ yarn global add pm2
+$ yarn build
 $ pm2 start ./dist --name="net64 server"
 ```

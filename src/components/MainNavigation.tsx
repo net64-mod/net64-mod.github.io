@@ -23,7 +23,7 @@ const Header: React.SFC = (): JSX.Element => (
       },
       {
         label: 'Social',
-        url: 'social'
+        url: '/social'
       }
     ]}
   />

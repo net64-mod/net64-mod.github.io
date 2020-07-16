@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Troubleshooting"
+title: 'Troubleshooting'
 ---
 
 ### I want to play a different gamemode, how do I change it?
 
-First check to make sure Gameplay voting is enabled for that server, or else then you can’t change it.  Type `/gamemode` followed by a number (1-8) in the the chat.
+First check to make sure Gameplay voting is enabled for that server, or else then you can’t change it. Type `/gamemode` followed by a number (1-8) in the the chat.
 Here’s a list of all gamemodes:
 
 - `/gamemode 1`: Regular, with interaction/punching
@@ -43,7 +43,7 @@ If the problem persists, check if your anti-virus and firewall have an exception
 
 Net64+ should launch normally, but if it doesn’t then first check if your computer is a 32-bits (x86) or 64-bits.
 
-*How do you check if it is a 64-Bit or 32-Bit?*
+_How do you check if it is a 64-Bit or 32-Bit?_
 
 If you have a Windows 10 computer right click the start button and and click System, under Device specifications and System Type will it show if you have a 64-bit operating system or a 32-bit.
 If your computer is 32-Bit, it is not supported by Net64 2.0.
@@ -63,7 +63,7 @@ This normally occurs when there is a memory issue with the emulator, if it’s n
 
 The error code that the blue screen seems to give is related to this error code on [Microsoft's website](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x3b--system-service-exception)
 
-### No Controller Error, cannot bind controls or Debug Error:  Run-time check failure#1
+### No Controller Error, cannot bind controls or Debug Error: Run-time check failure#1
 
 The default plugin for binding controls may not work as intended all the time. Another great plugin for control binding that comes with the Memory Modded Project64 is `N-Rage for PJ64: 2.4.0.2`
 
@@ -88,9 +88,9 @@ The Net64 tool requires a 64-bit computer, currently there are no plans for addi
 
 Currently there are no plans to natively support Mac/Linux. You can try to use a “Virtual Machine” but there’s no guarantee that it will work. Users have seemingly had the most success with Wine and WineTricks, but have yet to get it fully working.
 
-### I downloaded a .zip file and all I see are weird files.  Where is Net64?
+### I downloaded a .zip file and all I see are weird files. Where is Net64?
 
-You accidentally downloaded the source code, you need to download the 7z above the source code download ([Net64+ 2.0 Client is here](https://github.com/Tarnadas/net64plus/releases/latest)).  Also make sure you downloaded it either from the Net64 Discord or Tarnadas’ Github
+You accidentally downloaded the source code, you need to download the 7z above the source code download ([Net64+ 2.0 Client is here](https://github.com/Tarnadas/net64plus/releases/latest)). Also make sure you downloaded it either from the Net64 Discord or Tarnadas’ Github
 
 ### How do I extract the client from the RAR?
 
@@ -99,17 +99,17 @@ You need to use a program called "7-Zip", once you download and install either o
 ### I can’t find 16MB under Memory Size/The highest is only 8MB
 
 You’re using the wrong emulator.
-Net64 2.0  requires Project 64 Memory Mod, a special emulator that allows more RAM to be used than a conventional N64 emulator. With the extra RAM, Net64 can import more characters, gamemodes, and provide ROM hack support.
+Net64 2.0 requires Project 64 Memory Mod, a special emulator that allows more RAM to be used than a conventional N64 emulator. With the extra RAM, Net64 can import more characters, gamemodes, and provide ROM hack support.
 It should have been included in with the client download, else you can get it from here:
 [Project64 2.2 Memory Mod](https://mega.nz/#!aOBAlKQJ!I3D3m1CtyczjYcvEAozvRIBPAK29lTNVidoHzuGdkmc)
 
 ### I have an older version of Net64, will that still work with 2.0?
 
-No, you won’t be able to connect to anyone who’s using 2.0 as it’s missing information and will kick you out of the server.  You can still use it for your own personal use or to play with friends, but they must be using the same version as you.
+No, you won’t be able to connect to anyone who’s using 2.0 as it’s missing information and will kick you out of the server. You can still use it for your own personal use or to play with friends, but they must be using the same version as you.
 
 ### I just want to use the new characters, not play online!
 
-As of 2.0.1, you should be able to play offline after selecting the emulator.  If it’s still not working or you’re invisible, go to the ‘server’ folder included with the download and open `net64plus-ded.exe`.  Open Net64 and click `Navigation` then click `Direct Connect`
+As of 2.0.1, you should be able to play offline after selecting the emulator. If it’s still not working or you’re invisible, go to the ‘server’ folder included with the download and open `net64plus-ded.exe`. Open Net64 and click `Navigation` then click `Direct Connect`
 Type in `127.0.0.1` and click connect (This will connect you to your own computer, not a server).
 
 ### Game freezes/”Fatal Error”/White screen when I start Net64
@@ -128,7 +128,7 @@ This happens when you press `backspace` on your keyboard. It's a feature that ch
 
 This error is caused by tampering with the graphics plugin. By default it is set to Glide64 Napalm.
 **DO NOT CHANGE THE GRAPHICS PLUGIN!**
-Net64 2.0 only works with `Glide64 Napalm WX Release 1`.  If you did change it, just set it back to Glide64 Napalm (in settings) and restart.
+Net64 2.0 only works with `Glide64 Napalm WX Release 1`. If you did change it, just set it back to Glide64 Napalm (in settings) and restart.
 
 ### Exception error: Line 259
 
@@ -136,6 +136,7 @@ If this error is preceded by one about plugins, refer to the entry above on that
 If not, or if this error persists after fixing that one: This is usually because of your graphics card, it means that the integrated graphics card (Usually a mobile chipset or something similar by Intel) cannot display the data from the Glide64 plugin. The first thing to try is to update the video drivers of your graphics card.
 
 If the error still persists, try the following:
+
 1. Go to `Options/Settings/Plugins`
 2. Change the graphics plugin to `Jabo's Direct3D6 1.5.2`
 3. Open Super Mario 64
@@ -154,4 +155,4 @@ However this is an alternate solution; using `Direct Connect`.
 
 ### Why is it taking so long to connect?
 
-It is possible that the server is full on players or the server host did not port-forward correctly.  Try using a different server.  If you’re trying to play privately with a friend, make sure they set everything up correctly.
+It is possible that the server is full on players or the server host did not port-forward correctly. Try using a different server. If you’re trying to play privately with a friend, make sure they set everything up correctly.

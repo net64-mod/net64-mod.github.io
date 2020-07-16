@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Download"
-description: "Net64 download page."
-keywords: ["download", "client", "server", "dedicated", "node", "electron"]
+title: 'Download'
+description: 'Net64 download page.'
+keywords: ['download', 'client', 'server', 'dedicated', 'node', 'electron']
 ---
 
 ## Net64 Client

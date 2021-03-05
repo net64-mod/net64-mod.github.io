@@ -58,6 +58,7 @@ const HeaderStyled = styled.div`
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   .img {
     height: 18px;
@@ -228,7 +229,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
       .map((player, index) => (
         <PlayerStyled key={index}>
           <div className="img">
-            <img src={this.getCharacterImage(player.characterId || 0)} />
+            <img src={this.getCharacterImage(player.characterId || 0)} alt={`character-${player.characterId}`} />
           </div>
           <div className="name">{player.username}</div>
         </PlayerStyled>
@@ -264,12 +265,12 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
       <ServerPanelStyled>
         <HeaderStyled onClick={this.handleToggle}>
           <div className="img">
-            <img src={`${server.isDedicated ? serverIcon : pcIcon}`} />
+            <img src={`${server.isDedicated ? serverIcon : pcIcon}`} alt="server-icon" />
           </div>
           <div style={{ flex: '0 0 40px' }}>{server.countryCode || ''}</div>
           {gameMode && (
             <div className="img">
-              <img src={gameMode} />
+              <img src={gameMode} alt="game-mode" />
             </div>
           )}
           <div style={styles.name}>{server.name || `${server.ip}:${server.port}`}</div>

@@ -10,7 +10,7 @@ const StyledButton = styled.div`
   font-size: ${getEmSize(20)}em;
   display: inline-flex;
   cursor: pointer;
-  margin-bottom: 0.6rem;
+  margin: ${({ margin }: Partial<ButtonProps>) => (margin ? margin : '0 0 0.6rem 0')};
   border-radius: 1000px;
   border-color: ${colors.gray.copy};
   background-color: ${colors.white};
@@ -61,6 +61,7 @@ const Label = styled.div`
 interface ButtonProps {
   to?: string
   img?: string
+  margin?: string
 }
 
 interface StaticQueryProps {
@@ -79,11 +80,11 @@ interface StaticQueryProps {
 
 const getContent = (children: React.ReactNode, img?: FluidObject | string): JSX.Element => (
   <>
-    {img && <ImgWrapper>{typeof img == 'string' ? <img src={img} /> : <Img fluid={img} />}</ImgWrapper>}
+    {img && <ImgWrapper>{typeof img == 'string' ? <img src={img} alt={`button-${img.substr(5)}`} /> : <Img fluid={img} />}</ImgWrapper>}
     <Label>{children}</Label>
   </>
 )
-const Button: React.FunctionComponent<ButtonProps> = ({ to, img, children }) => (
+const Button: React.FunctionComponent<ButtonProps> = ({ to, img, margin, children }) => (
   <StaticQuery
     query={graphql`
       query ButtonQuery {
@@ -110,7 +111,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({ to, img, children }) => 
           : require(`../images/${buttonImg.node.relativePath}`).default // eslint-disable-line @typescript-eslint/no-var-requires
         : undefined
       return (
-        <StyledButton>
+        <StyledButton margin={margin}>
           {to ? (
             to.includes('//') ? (
               <a href={to} target="_blank" rel="noopener noreferrer">

@@ -113,7 +113,7 @@ const Navigation: React.FunctionComponent<NavigationProps> = ({ links }) => {
     <>
       <MobileNavigation>
         <MenuButton onClick={() => setVisible(!visible)}>
-          <img src={menu} />
+          <img src={menu} alt="menu" />
         </MenuButton>
         <StyledNavigationBackground visible={visible} onClick={() => setVisible(false)} />
       </MobileNavigation>

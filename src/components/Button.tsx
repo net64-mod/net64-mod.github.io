@@ -11,6 +11,7 @@ const StyledButton = styled.div`
   display: inline-flex;
   cursor: pointer;
   margin: ${({ margin }: Partial<ButtonProps>) => (margin ? margin : '0 0 0.6rem 0')};
+  padding: ${({ padding }: Partial<ButtonProps>) => (padding ? padding : undefined)};
   border-radius: 1000px;
   border-color: ${colors.gray.copy};
   background-color: ${colors.white};
@@ -55,13 +56,15 @@ const ImgWrapper = styled.div`
 const Label = styled.div`
   height: ${getEmSize(36)}rem;
   line-height: ${getEmSize(36)}rem;
-  padding: 0 ${getEmSize(4)}rem;
+  padding: ${({ paddingtext }: Partial<ButtonProps>) => (paddingtext ? paddingtext : `0 ${getEmSize(4)}rem`)};
 `
 
 interface ButtonProps {
   to?: string
   img?: string
   margin?: string
+  padding?: string
+  paddingtext?: string
 }
 
 interface StaticQueryProps {
@@ -78,13 +81,13 @@ interface StaticQueryProps {
   }
 }
 
-const getContent = (children: React.ReactNode, img?: FluidObject | string): JSX.Element => (
+const getContent = (children: React.ReactNode, img?: FluidObject | string, paddingtext?: string): JSX.Element => (
   <>
     {img && <ImgWrapper>{typeof img == 'string' ? <img src={img} alt={`button-${img.substr(5)}`} /> : <Img fluid={img} />}</ImgWrapper>}
-    <Label>{children}</Label>
+    <Label paddingtext={paddingtext}>{children}</Label>
   </>
 )
-const Button: React.FunctionComponent<ButtonProps> = ({ to, img, margin, children }) => (
+const Button: React.FunctionComponent<ButtonProps> = ({ to, img, margin, padding, paddingtext, children }) => (
   <StaticQuery
     query={graphql`
       query ButtonQuery {
@@ -111,17 +114,17 @@ const Button: React.FunctionComponent<ButtonProps> = ({ to, img, margin, childre
           : require(`../images/${buttonImg.node.relativePath}`).default // eslint-disable-line @typescript-eslint/no-var-requires
         : undefined
       return (
-        <StyledButton margin={margin}>
+        <StyledButton margin={margin} padding={padding}>
           {to ? (
             to.includes('//') ? (
               <a href={to} target="_blank" rel="noopener noreferrer">
-                {getContent(children, image)}
+                {getContent(children, image, paddingtext)}
               </a>
             ) : (
-              <Link to={to}>{getContent(children, image)}</Link>
+              <Link to={to}>{getContent(children, image, paddingtext)}</Link>
             )
           ) : (
-            getContent(children, image)
+            getContent(children, image, paddingtext)
           )}
         </StyledButton>
       )

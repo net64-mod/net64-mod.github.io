@@ -1,5 +1,4 @@
 import * as React from 'react'
-import axios from 'axios'
 
 import Button from './Button'
 
@@ -62,12 +61,7 @@ export default class DownloadButton extends React.PureComponent<null, DownloadBu
   }
 
   private async getGithubReleases(): Promise<Release[]> {
-    return (
-      await axios.request<Release[]>({
-        method: 'get',
-        url: 'https://api.github.com/repos/tarnadas/net64plus/releases',
-        timeout: 10000
-      })
-    ).data
+    const res = await fetch('https://api.github.com/repos/tarnadas/net64plus/releases')
+    return res.json()
   }
 }

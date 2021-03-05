@@ -1,14 +1,11 @@
 import { Server } from '../models/Server'
-import axios from 'axios'
 
 export async function getNet64Servers(): Promise<Server[] | null> {
   try {
-    return (
-      await axios.get('https://smmdb.net/api/getnet64servers', {
-        method: 'get',
-        timeout: 10000
-      })
-    ).data
+    const res = await fetch('https://smmdb.net/api/getnet64servers', {
+      method: 'get'
+    })
+    return res.json()
   } catch (err) {
     return null
   }

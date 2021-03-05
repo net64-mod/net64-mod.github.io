@@ -39,7 +39,7 @@ interface NavigationLinkProps {
   link: PageLink
 }
 
-const NavigationLink: React.SFC<NavigationLinkProps> = ({ link }): JSX.Element => (
+const NavigationLink: React.FunctionComponent<NavigationLinkProps> = ({ link }) => (
   <StyledNavigationLink>
     <Link to={link.url}>{link.label}</Link>
   </StyledNavigationLink>

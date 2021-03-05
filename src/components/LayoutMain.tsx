@@ -19,7 +19,7 @@ interface LayoutMainProps {
   className?: string
 }
 
-const LayoutMain: React.SFC<LayoutMainProps> = ({ children, className }): JSX.Element => (
+const LayoutMain: React.FunctionComponent<LayoutMainProps> = ({ children, className }) => (
   <StyledLayoutMain className={className}>{children}</StyledLayoutMain>
 )
 

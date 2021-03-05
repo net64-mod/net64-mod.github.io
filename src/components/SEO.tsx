@@ -29,7 +29,7 @@ interface SEOProps {
   frontmatter?: Frontmatter
 }
 
-const SEO: React.SFC<SEOProps> = ({ slug, frontmatter }): JSX.Element => (
+const SEO: React.FunctionComponent<SEOProps> = ({ slug, frontmatter }) => (
   <StaticQuery
     query={graphql`
       query SEOQuery {
@@ -56,7 +56,7 @@ const SEO: React.SFC<SEOProps> = ({ slug, frontmatter }): JSX.Element => (
         }
       }
     `}
-    render={(data: StaticQueryProps): JSX.Element => {
+    render={(data: StaticQueryProps) => {
       const edge = data.allMarkdownRemark.edges.find((edge) => edge.node.fields.slug === slug)
       if (edge) {
         frontmatter = frontmatter || edge.node.frontmatter

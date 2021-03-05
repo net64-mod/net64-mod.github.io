@@ -29,7 +29,7 @@ interface StaticQueryProps {
   }
 }
 
-const News: React.SFC = (): JSX.Element => (
+const News: React.FunctionComponent = () => (
   <StaticQuery
     query={graphql`
       query NewsQuery {

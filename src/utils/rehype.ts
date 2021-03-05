@@ -9,5 +9,5 @@ import ServerList from '../components/ServerList'
 // @ts-ignore
 export const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { button: Button, 'download-button': DownloadButton as any, 'server-list': ServerList as any }
+  components: { button: Button, 'download-button': DownloadButton, 'server-list': ServerList }
 }).Compiler

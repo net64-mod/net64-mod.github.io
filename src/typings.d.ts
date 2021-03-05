@@ -13,3 +13,13 @@ declare module '*.module.css' {
   const cssModule: CSSModule
   export = cssModule
 }
+
+declare module '*.svg' {
+  const content: any
+  export default content
+}
+
+declare module '*.png' {
+  const content: any
+  export default content
+}

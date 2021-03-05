@@ -7,7 +7,7 @@ import News from '../components/News'
 import SEO from '../components/SEO'
 import IndexLayout from '../layouts'
 
-const IndexPage = (): JSX.Element => (
+const IndexPage: React.FunctionComponent = () => (
   <IndexLayout>
     <Page>
       <Container>

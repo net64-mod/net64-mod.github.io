@@ -25,7 +25,7 @@ interface PageTemplateProps {
   }
 }
 
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }): JSX.Element => {
+const PageTemplate: React.FunctionComponent<PageTemplateProps> = ({ data }) => {
   const title = `${data.site.siteMetadata.title} - ${data.markdownRemark.frontmatter.title}`
   return (
     <IndexLayout>

@@ -83,7 +83,7 @@ const getContent = (children: React.ReactNode, img?: FluidObject | string): JSX.
     <Label>{children}</Label>
   </>
 )
-const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
+const Button: React.FunctionComponent<ButtonProps> = ({ to, img, children }) => (
   <StaticQuery
     query={graphql`
       query ButtonQuery {
@@ -107,7 +107,7 @@ const Button: React.SFC<ButtonProps> = ({ to, img, children }): JSX.Element => (
       const image: FluidObject | string | undefined = buttonImg
         ? buttonImg.node.childImageSharp
           ? buttonImg.node.childImageSharp.fluid
-          : require(`../images/${buttonImg.node.relativePath}`)
+          : require(`../images/${buttonImg.node.relativePath}`).default // eslint-disable-line @typescript-eslint/no-var-requires
         : undefined
       return (
         <StyledButton>

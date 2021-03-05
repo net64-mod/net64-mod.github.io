@@ -8,7 +8,7 @@ import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
 import Footer from '../components/Footer'
 
-const IndexLayout: React.SFC = ({ children }): JSX.Element => (
+const IndexLayout: React.FunctionComponent = ({ children }) => (
   <LayoutRoot>
     <MainNavigation />
     <LayoutMain>{children}</LayoutMain>

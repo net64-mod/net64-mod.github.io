@@ -99,15 +99,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/images/favicon.png',
-        icons: {
-          appleIcon: false
-        }
-      }
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-103677465-2',

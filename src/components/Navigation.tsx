@@ -5,6 +5,8 @@ import NavigationLink, { PageLink } from './NavigationLink'
 import { heights, zIndices, colors, breakpoints, widths } from '../styles/variables'
 import { getEmSize } from '../styles/mixins'
 
+import menu from '../images/menu.svg'
+
 const StyledNavigationWrapper = styled.div`
   position: fixed;
   z-index: 101;
@@ -104,14 +106,14 @@ interface NavigationProps {
   links: PageLink[]
 }
 
-const Navigation: React.SFC<NavigationProps> = ({ links }): JSX.Element => {
+const Navigation: React.FunctionComponent<NavigationProps> = ({ links }) => {
   const [visible, setVisible] = React.useState(false)
 
   return (
     <>
       <MobileNavigation>
         <MenuButton onClick={() => setVisible(!visible)}>
-          <img src={require('../images/menu.svg')} />
+          <img src={menu} />
         </MenuButton>
         <StyledNavigationBackground visible={visible} onClick={() => setVisible(false)} />
       </MobileNavigation>

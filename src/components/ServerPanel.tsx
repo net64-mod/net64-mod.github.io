@@ -9,6 +9,30 @@ import { GameMode } from '../models/GameMode'
 import { Player } from '../models/Player'
 import { colors } from '../styles/variables'
 
+import serverIcon from '../images/server.svg'
+import pcIcon from '../images/pc.svg'
+
+import regular from '../images/regular.svg'
+import interactionless from '../images/interactionless.svg'
+import shooter from '../images/shooter.svg'
+import propHunt from '../images/prop_hunt.svg'
+import tag from '../images/tag.svg'
+import bossRush from '../images/boss_rush.png'
+import warioWare from '../images/wario_ware.png'
+
+import mario from '../images/mario.png'
+import luigi from '../images/luigi.png'
+import yoshi from '../images/yoshi.png'
+import wario from '../images/wario.png'
+import peach from '../images/peach.png'
+import toad from '../images/toad.png'
+import waluigi from '../images/waluigi.png'
+import rosalina from '../images/rosalina.png'
+import sonic from '../images/sonic.png'
+import knuckles from '../images/knuckles.png'
+import goomba from '../images/goomba.png'
+import kirby from '../images/kirby.png'
+
 interface ServerPanelProps {
   server: Server
 }
@@ -153,48 +177,48 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
   private getGameModeImgSrc(server: Server): string | undefined {
     switch (server.gameMode) {
       case GameMode.DEFAULT:
-        return require('../images/regular.svg')
+        return regular
       case GameMode.INTERACTIONLESS:
-        return require('../images/interactionless.svg')
+        return interactionless
       case GameMode.THIRD_PERSON_SHOOTER:
-        return require('../images/shooter.svg')
+        return shooter
       case GameMode.PROP_HUNT:
-        return require('../images/prop_hunt.svg')
+        return propHunt
       case GameMode.TAG:
-        return require('../images/tag.svg')
+        return tag
       case GameMode.BOSS_RUSH:
-        return require('../images/boss_rush.png')
+        return bossRush
       case GameMode.WARIO_WARE:
-        return require('../images/wario_ware.png')
+        return warioWare
     }
   }
 
   private getCharacterImage(index: number): string | undefined {
     switch (index) {
       case 0:
-        return require('../images/mario.png')
+        return mario
       case 1:
-        return require('../images/luigi.png')
+        return luigi
       case 2:
-        return require('../images/yoshi.png')
+        return yoshi
       case 3:
-        return require('../images/wario.png')
+        return wario
       case 4:
-        return require('../images/peach.png')
+        return peach
       case 5:
-        return require('../images/toad.png')
+        return toad
       case 6:
-        return require('../images/waluigi.png')
+        return waluigi
       case 7:
-        return require('../images/rosalina.png')
+        return rosalina
       case 8:
-        return require('../images/sonic.png')
+        return sonic
       case 9:
-        return require('../images/knuckles.png')
+        return knuckles
       case 10:
-        return require('../images/goomba.png')
+        return goomba
       case 11:
-        return require('../images/kirby.png')
+        return kirby
     }
   }
 
@@ -240,7 +264,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
       <ServerPanelStyled>
         <HeaderStyled onClick={this.handleToggle}>
           <div className="img">
-            <img src={`${server.isDedicated ? require('../images/server.svg') : require('../images/pc.svg')}`} />
+            <img src={`${server.isDedicated ? serverIcon : pcIcon}`} />
           </div>
           <div style={{ flex: '0 0 40px' }}>{server.countryCode || ''}</div>
           {gameMode && (

@@ -36,7 +36,7 @@ interface NewsEntryProps {
   date: Date
 }
 
-const NewsEntry: React.SFC<NewsEntryProps> = ({ author, title, date, children }): JSX.Element => {
+const NewsEntry: React.FunctionComponent<NewsEntryProps> = ({ author, title, date, children }) => {
   const timestamp = date.toLocaleDateString()
   return (
     <StyledNewsEntry>

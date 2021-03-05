@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Global, css } from '@emotion/core'
+import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import normalize from '../styles/normalize'
 
@@ -13,7 +13,7 @@ interface LayoutRootProps {
   className?: string
 }
 
-const LayoutRoot: React.SFC<LayoutRootProps> = ({ children, className }): JSX.Element => (
+const LayoutRoot: React.FunctionComponent<LayoutRootProps> = ({ children, className }) => (
   <>
     <Global styles={() => css(normalize)} />
     <StyledLayoutRoot className={className}>{children}</StyledLayoutRoot>

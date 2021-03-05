@@ -38,7 +38,7 @@ interface ServerPanelProps {
 }
 
 interface ServerPanelState {
-  display: boolean
+  extended: boolean
 }
 
 const ServerPanelStyled = styled.div`
@@ -77,7 +77,7 @@ const DetailsWrapperStyled = styled.div`
   border-radius: 0 0 10px 10px;
   transition: 0.5s ease max-height;
   overflow: hidden;
-  max-height: ${({ display }: Partial<ServerPanelState>) => (display ? '500px' : '0px')};
+  max-height: ${({ extended }: Partial<ServerPanelState>) => (extended ? '500px' : '0px')};
 `
 
 const DetailsStyled = styled.div`
@@ -132,7 +132,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
   public constructor(props: ServerPanelProps) {
     super(props)
     this.state = {
-      display: false
+      extended: false
     }
     this.handleToggle = this.handleToggle.bind(this)
     this.renderPlayers = this.renderPlayers.bind(this)
@@ -148,7 +148,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
 
   private handleToggle(event: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
     this.setState((prevState) => ({
-      display: !prevState.display
+      extended: !prevState.extended
     }))
     event.preventDefault()
     event.stopPropagation()
@@ -237,7 +237,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
 
   public render(): JSX.Element {
     const { server } = this.props
-    const { display } = this.state
+    const { extended } = this.state
     const players = server.players || []
     const gameMode: string | undefined = this.getGameModeImgSrc(server)
     const styles: Record<string, React.CSSProperties> = {
@@ -275,7 +275,7 @@ export default class ServerPanel extends React.PureComponent<ServerPanelProps, S
           <div style={styles.name}>{server.name || `${server.ip}:${server.port}`}</div>
           <div style={styles.players}>{players.filter((player) => player).length} / 24</div>
         </HeaderStyled>
-        <DetailsWrapperStyled display={display}>
+        <DetailsWrapperStyled extended={extended}>
           <DetailsStyled>
             <div style={styles.left}>
               <DescriptionStyled>

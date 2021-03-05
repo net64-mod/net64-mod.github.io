@@ -56,7 +56,7 @@ export default class ServerList extends React.PureComponent<null, ServerListStat
     this.mounted = false
   }
 
-  public componentWillReceiveProps(): void {
+  public componentDidUpdate(): void {
     this.setState({
       loading: false
     })

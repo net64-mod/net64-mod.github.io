@@ -3,11 +3,12 @@ import * as rehypeReact from 'rehype-react'
 
 import Button from '../components/Button'
 import DownloadButton from '../components/DownloadButton'
+import Margin from '../components/Margin'
 import ServerList from '../components/ServerList'
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 export const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { button: Button, 'download-button': DownloadButton, 'server-list': ServerList }
+  components: { button: Button, 'download-button': DownloadButton, margin: Margin, 'server-list': ServerList }
 }).Compiler

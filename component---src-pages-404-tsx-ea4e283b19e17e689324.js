@@ -1,0 +1,2 @@
+(self.webpackChunknet64_github_io=self.webpackChunknet64_github_io||[]).push([[218],{938:function(t,n,u){"use strict";u.r(n);u(7294);var l=u(5444),e=u(7614),i=u(832),o=u(3281),Z=u(3431);n.default=function(){return(0,Z.tZ)(o.Z,null,(0,Z.tZ)(e.Z,null,(0,Z.tZ)(i.Z,null,(0,Z.tZ)("h1",null,"404: Page not found."),(0,Z.tZ)("p",null,"You've hit the void. ",(0,Z.tZ)(l.Link,{to:"/"},"Go back.")))))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-ea4e283b19e17e689324.js.map

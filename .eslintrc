@@ -2,11 +2,13 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "prettier",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "jsx-a11y"
   ],
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:jsx-a11y/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 6,

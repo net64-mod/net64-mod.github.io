@@ -2,7 +2,7 @@
 layout: page
 title: 'Social'
 description: 'Net64 social network links to Discord.'
-keywords: ['social', 'media', 'discord']
+keywords: ['social', 'media', 'discord', 'affiliates', 'SMMDB', 'sm64js', 'sm64pc']
 ---
 
 ## Discord
@@ -36,3 +36,10 @@ This is an ongoing work-in-progress port of the decompilation of original Ninten
 
 <button to="https://sm64js.com" img="sm64js.png" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Website</button>
 <button to="https://discord.gg/7UaDnJt" img="discord.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Discord</button>
+
+### SM64PC
+
+Community resource for SM64's PC Port. Your source for the latest info on new mods, models, and total conversions for the game everyone loves. Need help learning how to get started? Join our Discord today!
+
+<button to="http://sm64pc.info/" img="sm64pc.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Website</button>
+<button to="https://discord.gg/ZezK78p" img="discord.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Discord</button>

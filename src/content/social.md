@@ -41,5 +41,5 @@ This is an ongoing work-in-progress port of the decompilation of original Ninten
 
 Community resource for SM64's PC Port. Your source for the latest info on new mods, models, and total conversions for the game everyone loves. Need help learning how to get started? Join our Discord today!
 
-<button to="http://sm64pc.info/" img="sm64pc.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Website</button>
+<button to="https://sm64pc.info/" img="sm64pc.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Website</button>
 <button to="https://discord.gg/ZezK78p" img="discord.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Discord</button>

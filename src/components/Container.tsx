@@ -6,10 +6,13 @@ import { getEmSize } from '../styles/mixins'
 
 const StyledContainer = styled.div`
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin: ${getEmSize(48)}em auto;
   width: auto;
   max-width: ${getEmSize(widths.lg)}em;
+
+  &:first-child {
+    margin-top: 0;
+  }
 `
 
 interface ContainerProps {

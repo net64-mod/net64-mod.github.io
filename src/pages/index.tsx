@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
+import Credits from '../components/Credits'
 import Button from '../components/Button'
 import News from '../components/News'
 import SEO from '../components/SEO'
@@ -22,7 +23,9 @@ const IndexPage: React.FunctionComponent = () => (
           Download Net64Plus »
         </Button>
       </Container>
+      <Credits />
       <Container>
+        <h2>Blog</h2>
         <News />
       </Container>
     </Page>

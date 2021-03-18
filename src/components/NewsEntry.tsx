@@ -13,6 +13,10 @@ const StyledNewsEntry = styled.div`
   box-shadow: 0 5px 15px 3px ${colors.gray.copy};
   color: black;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   p:last-child {
     margin-bottom: 0;
   }

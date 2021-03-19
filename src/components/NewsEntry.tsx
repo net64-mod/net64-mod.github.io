@@ -38,13 +38,14 @@ interface NewsEntryProps {
   author: string
   title: string
   date: Date
+  link?: string
 }
 
-const NewsEntry: React.FunctionComponent<NewsEntryProps> = ({ author, title, date, children }) => {
+const NewsEntry: React.FunctionComponent<NewsEntryProps> = ({ author, title, date, link, children }) => {
   const timestamp = date.toLocaleDateString()
   return (
     <StyledNewsEntry>
-      <StyledHeader>{title}</StyledHeader>
+      <StyledHeader>{link ? <a href={link}>{title}</a> : title}</StyledHeader>
       <StyledSubHeader>
         {timestamp} - by {author}
       </StyledSubHeader>

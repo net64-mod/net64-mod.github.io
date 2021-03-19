@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 
 import { renderAst } from '../utils/rehype'
 import NewsEntry from './NewsEntry'
+import { FrontmatterBlog } from '../models/Frontmatter'
 
 const StyledNews = styled.div`
   display: flex;
@@ -18,10 +19,9 @@ interface StaticQueryProps {
       node: {
         childMarkdownRemark: {
           htmlAst: string
-          frontmatter: {
-            author: string
-            title: string
-            date: string | Date
+          frontmatter: FrontmatterBlog
+          fields: {
+            slug: string
           }
         }
       }
@@ -43,6 +43,9 @@ const News: React.FunctionComponent = () => (
                   title
                   date
                 }
+                fields {
+                  slug
+                }
               }
             }
           }
@@ -62,16 +65,21 @@ const News: React.FunctionComponent = () => (
               (edge2.node.childMarkdownRemark.frontmatter.date as Date).valueOf() -
               (edge1.node.childMarkdownRemark.frontmatter.date as Date).valueOf()
           )
-          .map((edge) => (
-            <NewsEntry
-              author={edge.node.childMarkdownRemark.frontmatter.author}
-              title={edge.node.childMarkdownRemark.frontmatter.title}
-              date={edge.node.childMarkdownRemark.frontmatter.date as Date}
-              key={`${edge.node.childMarkdownRemark.frontmatter.date}.${edge.node.childMarkdownRemark.frontmatter.title}`}
-            >
-              {renderAst(edge.node.childMarkdownRemark.htmlAst)}
-            </NewsEntry>
-          ))}
+          .map((edge) => {
+            const md = edge.node.childMarkdownRemark
+            const link = `/blog${edge.node.childMarkdownRemark.fields.slug}`
+            return (
+              <NewsEntry
+                author={md.frontmatter.author}
+                title={md.frontmatter.title}
+                date={md.frontmatter.date as Date}
+                link={link}
+                key={`${md.frontmatter.date}.${md.frontmatter.title}`}
+              >
+                {renderAst(md.htmlAst)}
+              </NewsEntry>
+            )
+          })}
       </StyledNews>
     )}
   />

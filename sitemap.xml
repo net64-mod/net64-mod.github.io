@@ -8,5 +8,8 @@
 <url> <loc>https://net64-mod.github.io/wiki/hosting/docker/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://net64-mod.github.io/wiki/hosting/private/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://net64-mod.github.io/wiki/hosting/public/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://net64-mod.github.io/blog/discord-shutdown/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://net64-mod.github.io/blog/net64-future/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://net64-mod.github.io/blog/new-website/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://net64-mod.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>

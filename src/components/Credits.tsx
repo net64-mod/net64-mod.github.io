@@ -21,7 +21,7 @@ const Credits: React.FunctionComponent = () => (
         </Button>
       </Card>
       <Card title="Kaze Emanuar" icon="kazeemanuar.png">
-        Assembly code
+        Assembly code, 3D models
         <br />
         <Button to="https://www.twitch.tv/kazesm64" img="twitch.svg" margin="0 0.4em 0.4em 0">
           Twitch
@@ -42,6 +42,25 @@ const Credits: React.FunctionComponent = () => (
         <Button to="https://www.youtube.com/melonspeedruns" img="youtube.svg">
           YouTube
         </Button>
+      </Card>
+      <Card title="Marshivolt" icon="marshivolt.jpg">
+        3D models
+        <br />
+        <Button to="https://twitter.com/Marshivolt" img="twitter.svg" margin="0 0.4em 0.4em 0">
+          Twitter
+        </Button>
+        <Button to="https://www.youtube.com/channel/UCi8_NJFUne1kchf58qHfA-Q" img="youtube.svg">
+          YouTube
+        </Button>
+      </Card>
+      <Card title="Others" icon="team.svg">
+        <b>Henrik</b>, old Linux client + work on v3
+        <br />
+        <b>Guad</b>, work on v1
+        <br />
+        <b>Cjes</b>, 3D model
+        <br />
+        <b>TheAnkleDestroyer</b>, 3D models
       </Card>
     </CardContainer>
   </Container>

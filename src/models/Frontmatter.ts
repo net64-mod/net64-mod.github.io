@@ -3,3 +3,11 @@ export interface Frontmatter {
   description?: string
   keywords?: string
 }
+
+export interface FrontmatterBlog {
+  author: string
+  title: string
+  date: string | Date
+  description?: string
+  keywords?: string
+}

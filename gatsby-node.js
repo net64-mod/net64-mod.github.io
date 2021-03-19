@@ -64,14 +64,25 @@ exports.createPages = async ({ graphql, actions }) => {
   allMarkdown.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const { slug, layout, instanceName } = node.fields
 
-    if (instanceName !== 'content') return
-
-    createPage({
-      path: slug,
-      component: path.resolve(`./src/templates/${layout || 'page'}.tsx`),
-      context: {
-        slug
-      }
-    })
+    switch (instanceName) {
+      case 'content':
+        createPage({
+          path: slug,
+          component: path.resolve(`./src/templates/${layout || 'page'}.tsx`),
+          context: {
+            slug
+          }
+        })
+        break
+      case 'news':
+        createPage({
+          path: `/blog${slug}`,
+          component: path.resolve(`./src/templates/blog.tsx`),
+          context: {
+            slug
+          }
+        })
+        break
+    }
   })
 }

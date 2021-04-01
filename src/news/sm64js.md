@@ -7,7 +7,7 @@ date: '2021-04-xx'
 Hey, we have some interesting news for you today!
 
 We would like to announce that Net64+ will from now on be in a passive maintenance mode, meaning Tarnadas will no longer develop new features.
-That does not mean the project will be abandoned. The server list will stay online and everyone can host his own server by following [one](https://net64-mod.github.io/wiki/hosting/public/) of our [documentations](https://net64-mod.github.io/wiki/hosting/docker/).
+That does not mean the project will be abandoned. The server list will stay online and everyone can host their own server by following [one](https://net64-mod.github.io/wiki/hosting/public/) of our [documentations](https://net64-mod.github.io/wiki/hosting/docker/).
 The [client](https://github.com/Tarnadas/net64plus) and [server](https://github.com/Tarnadas/net64plus-server) are also Open Source and Tarnadas will accept new Pull Requests as always.
 
 We'd also like to announce that development of version 3.0 will be halted.

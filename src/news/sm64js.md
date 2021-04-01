@@ -1,21 +1,26 @@
 ---
-author: 'Tarnadas & Henrik'
-title: 'Why I joined the sm64js dev team'
-date: '2021-03-31'
+author: 'Tarnadas, Henrik'
+title: 'WIP-Title'
+date: '2021-04-xx'
 ---
 
-Hey, this is Tarnadas and I have some interesting news for you today!
+Hey, we have some interesting news for you today!
 
-I would like to announce that Net64+ will from now on be in a passive maintenance mode, meaning I will no longer develop new features.
-This does not mean, that I abandon this project.
-Instead, I will keep the server list running, which is like the only infrastructure that needs to be hosted.
-The server list is powered by its users.
-Everyone can host his own server by following [one](https://net64-mod.github.io/wiki/hosting/public/) of our [documentations](https://net64-mod.github.io/wiki/hosting/docker/).
-The [client](https://github.com/Tarnadas/net64plus) and [server](<(https://github.com/Tarnadas/net64plus-server)>) are also Open Source and I will still accept new Pull Requests.
+We would like to announce that Net64+ will from now on be in a passive maintenance mode, meaning Tarnadas will no longer develop new features.
+That does not mean the project will be abandoned. The server list will stay online and everyone can host his own server by following [one](https://net64-mod.github.io/wiki/hosting/public/) of our [documentations](https://net64-mod.github.io/wiki/hosting/docker/).
+The [client](https://github.com/Tarnadas/net64plus) and [server](<(https://github.com/Tarnadas/net64plus-server)>) are also Open Source and Tarnadas will accept new Pull Requests as always.
 
-Our team thinks that Net64 has its place as an easy way to play Super Mario 64 with your friends or as a speedrunning game,
-but things change and with the rise of the [decompilation project](https://github.com/n64decomp/sm64) and its derivates, we have to move on and think about whether the design of Net64 can keep up with these recent changes in the ecosystem.
-The answer to this is "no".
+We'd also like to announce that development of version 3.0 will be halted. Not only is progress slow because only Henrik is working on it but with the advent of SM64 ports many other projects have emerged implementing multiplayer. These projects ported SM64 to various platforms like Windows or the web and are far easier to set up, easier to develop and therefore far better supported. Even if Net64 3.0 would release today these other projects would be superior in every way. We don't feel like working on something that will be obsolete before it's released. At the end of this post we'll add some links so you can check these projects out.
 
-The core of Net64 is written in Assembly and only a handful of people are capable to efficiently develop new features or do any kind of significant code changes.
-The decompilation of SM64 enables a new group of developers to work on stuff, which would have also been possible via Assembly, but it's just way too complicated and consumes too much time.
+SM64JS paragraph
+
+Net64 was the first SM64 online mod. It was groundbreaking at the time but nowadays the SM64 decompilation has allowed much more complex mods to be developed by a much wider group of developers. Don't be sad that Net64 has reached its end of life, these projects are the logical and spiritual successors of Net64. Net64 will remain an option for speedrunners and everyone preferring its "native feel" but anyone looking for more characters, maps, gamemodes or better synchonization will appreciate these new projects.
+
+SM64JS Discord:
+[![SM64JS Discord](https://discordapp.com/api/guilds/601153657966428193/widget.png)](https://discord.gg/7UaDnJt)
+
+SM64-PC-Online Discord:
+[![SM64-ex Discord](https://discordapp.com/api/guilds/559982917049253898/widget.png)](https://discord.gg/TJVKHS4)
+
+SM64DS-Online Discord:
+[![SM64-DS-Online Discord](https://discordapp.com/api/guilds/334848602130219009/widget.png)](https://discord.gg/PhpA9Wt)

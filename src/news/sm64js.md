@@ -24,3 +24,14 @@ SM64-PC-Online Discord:
 
 SM64DS-Online Discord:
 [![SM64-DS-Online Discord](https://discordapp.com/api/guilds/334848602130219009/widget.png)](https://discord.gg/PhpA9Wt)
+
+Lastly we want to thank everyone who made Net64 to what it is:
+- [MelonSpeedruns](https://twitter.com/MelonSpeedruns), for turning a childhood dream into a real thing.
+- [Kaze](https://twitter.com/KazeEmanuar) for developing the assembly and making the mod go viral.
+- [Guad](https://github.com/Guad) for developing the first client. 
+- [Marshivolt](https://twitter.com/Marshivolt), Cjes and TheAnkleDestroyer for creating the character models.
+- Our ex-Discord staff: [Marionova](https://twitter.com/Marionova64) and Jim-panse for building the community from the ground up.
+- Our current Discord staff: Bill and [Jman](https://twitter.com/PailBot) for supporting us and keeping the server alive.
+- All server hosters for providing the community with servers to play on without portforwarding.
+
+Thanks everyone! Without you.

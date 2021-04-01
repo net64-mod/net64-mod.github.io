@@ -1,10 +1,10 @@
 ---
 author: 'Tarnadas, Henrik'
-title: 'WIP-Title'
+title: ''
 date: '2021-04-xx'
 ---
 
-Hey, we have some interesting news for you today!
+Hey, we have some interesting news for you today
 
 We would like to announce that Net64+ will from now on be in a passive maintenance mode, meaning Tarnadas will no longer develop new features.
 That does not mean the project will be abandoned. The server list will stay online and everyone can host their own server by following [one](https://net64-mod.github.io/wiki/hosting/public/) of our [documentations](https://net64-mod.github.io/wiki/hosting/docker/).
@@ -21,6 +21,17 @@ Net64 was the first SM64 online mod.
 It was groundbreaking at the time but nowadays the SM64 decompilation has allowed much more complex mods to be developed by a much wider group of developers.
 Don't be sad that Net64 has reached its end of life, these projects are the logical and spiritual successors of Net64.
 Net64 will remain an option for speedrunners and everyone preferring its "native feel" but anyone looking for more characters, maps, gamemodes or better synchonization will appreciate these new projects.
+
+## SM64EX-Coop
+
+SM64ex-Coop is one of these new ports. It's an online mod that is based on the popular PC version. That means all features of the PC port come with it: Infinite drawing distance, 60FPS, custom textures, you name it! The mod currently supports two players and doesn't require a server. Almost all objects are synced and the team is constantly working on improving it. If you want to play Kaze's splitscreen mod but can't get your friend over because of some virus thing, this is the perfect mod for you! Check out their Discord for instructions, development updates and custom content:
+
+<button to="https://discord.gg/TJVKHS4" img="discord.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Discord</button>
+
+## SM64DS Online
+The name says it all. It's still in development so don't expect to play it *today* but it's looking very promising. Check them out:
+
+<button to="https://discord.gg/PhpA9Wt" img="discord.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Discord</button>
 
 ## SM64JS
 

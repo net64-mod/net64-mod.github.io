@@ -33,7 +33,7 @@ const BlogTemplate: React.FunctionComponent<PageTemplateProps> = ({ data }) => (
       <Container>
         <NewsEntry
           author={data.markdownRemark.frontmatter.author}
-          title={`${data.site.siteMetadata.title} - ${data.markdownRemark.frontmatter.title}`}
+          title={`${data.site.siteMetadata.title} Blog - ${data.markdownRemark.frontmatter.title}`}
           date={new Date(data.markdownRemark.frontmatter.date)}
           key={`${data.markdownRemark.frontmatter.date}.${data.markdownRemark.frontmatter.title}`}
         >

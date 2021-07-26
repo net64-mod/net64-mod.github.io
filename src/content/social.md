@@ -30,6 +30,18 @@ A cross console/emulator sharing platform for Super Mario Maker courses.
 
 <margin margin="2rem 0"></margin>
 
+### Shroom Kingdom
+
+Shroom Kingdom is an upcoming play2earn video game built with web technologies running on the [NEAR Protocol](https://near.org/) Blockchain.
+
+You can play with your favorite plumber brothers.
+Build your own levels or play levels from others.
+Every level built on Shroom Kingdom is stored on the blockchain as an NFT.
+
+<button to="http://shroomkingdom.net/" img="shrm.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Website</button>
+
+<margin margin="2rem 0"></margin>
+
 ### SM64JS
 
 This is an ongoing work-in-progress port of the decompilation of original Nintendo game, Super Mario 64, to native Javascript (No Emulation) (No WebAssembly). This project required creating a Javascript WebGL port of N64 Fast 3D Renderer originally implemented with OpenGL in C. This project also includes the development of online mass multiplayer versions of sm64js and other custom multiplayer game modes.

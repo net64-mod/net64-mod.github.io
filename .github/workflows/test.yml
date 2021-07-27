@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'yarn'
+
+      - name: Install Node dependencies
+        run: yarn install
+
+      - name: Test
+        run: yarn test

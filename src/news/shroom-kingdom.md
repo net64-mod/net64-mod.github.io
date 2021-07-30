@@ -2,6 +2,8 @@
 author: 'Tarnadas'
 title: 'My future plans of development'
 date: '2021-07-30'
+description: 'Shroom Kingdom is an upcoming play-to-earn earn video game built with web technologies running on the NEAR Blockchain.'
+keywords: [shroom, kingdom, blockchain, nft, gaming, playtoearn, play2earn, play, earn, near, protocol, nearprotocol]
 ---
 
 Hi, my name is Mario!

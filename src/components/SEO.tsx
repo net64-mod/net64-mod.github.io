@@ -63,7 +63,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({ slug, frontmatter }) => (
       }
       const title = `${data.site.siteMetadata.title}${frontmatter ? ` - ${frontmatter.title}` : ''}`
       const description = `${frontmatter ? `${frontmatter.description}\n` : ''}${data.site.siteMetadata.description}`
-      const keywords = [...data.site.siteMetadata.keywords, ...((frontmatter ? frontmatter.keywords : []) || [])].join(', ')
+      const allKeywords = [...((frontmatter ? frontmatter.keywords : []) || []), ...data.site.siteMetadata.keywords].join(', ')
       return (
         <Helmet
           title={title}
@@ -71,7 +71,7 @@ const SEO: React.FunctionComponent<SEOProps> = ({ slug, frontmatter }) => (
             { name: 'description', content: description },
             {
               name: 'keywords',
-              content: keywords
+              content: allKeywords
             }
           ]}
         />

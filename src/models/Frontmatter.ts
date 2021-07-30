@@ -9,5 +9,5 @@ export interface FrontmatterBlog {
   title: string
   date: string | Date
   description?: string
-  keywords?: string
+  keywords?: string[]
 }

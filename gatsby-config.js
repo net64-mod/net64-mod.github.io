@@ -99,13 +99,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-plausible`,
       options: {
-        trackingId: 'UA-103677465-2',
-        head: true,
-        anonymize: true,
-        respectDNT: true
-      }
+        domain: `net64-mod.github.io`,
+      },
     }
   ]
 }

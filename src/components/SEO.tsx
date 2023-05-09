@@ -72,6 +72,10 @@ const SEO: React.FunctionComponent<SEOProps> = ({ slug, frontmatter }) => (
             {
               name: 'keywords',
               content: allKeywords
+            },
+            {
+              name: 'google-site-verification',
+              content: 'BL_RYC379-9ArgasYzyLuQg7JLf7nh-ZmWMdTbDRMfM'
             }
           ]}
         />

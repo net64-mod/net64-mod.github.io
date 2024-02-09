@@ -55,3 +55,11 @@ Community resource for SM64's PC Port. Your source for the latest info on new mo
 
 <button to="https://sm64pc.info/" img="sm64pc.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Website</button>
 <button to="https://discord.gg/ZezK78p" img="discord.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Discord</button>
+
+### Shitzu Apes
+
+Introducing SHITZU, the original meme coin of Aurora. Now also on Near Protocol. 100% driven by community effort.
+
+<button to="https://shitzuapes.xyz/" img="shitzu.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Website</button>
+<button to="https://x.com/shitzucommunity" img="twitter.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Twitter</button>
+<button to="https://t.me/Shitzu_Community" img="telegram.svg" margin="0.4rem 0.6rem" padding="0 0.4rem" paddingtext="0 0.8rem">Telegram</button>
